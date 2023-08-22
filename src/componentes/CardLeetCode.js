@@ -1,5 +1,6 @@
 import React from "react"
 import { StyledCardLeetCode } from "./styles"
+import PropTypes from "prop-types"
 
 export default function CardLeetCode(props) {
 
@@ -14,4 +15,11 @@ export default function CardLeetCode(props) {
             <img src={props.image}/>
         </StyledCardLeetCode>
     )
+}
+
+CardLeetCode.PropTypes = {
+    link: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired
 }

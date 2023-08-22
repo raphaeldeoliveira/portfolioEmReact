@@ -1,5 +1,6 @@
 import React from "react"
 import { ButtonSocialMidia } from "./styles"
+import PropTypes from "prop-types"
 
 export default function SocialMidiaButton(props) {
 
@@ -8,4 +9,9 @@ export default function SocialMidiaButton(props) {
             <img src={props.image}/>
         </ButtonSocialMidia>
     )
+}
+
+SocialMidiaButton.PropTypes = {
+    link: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired
 }

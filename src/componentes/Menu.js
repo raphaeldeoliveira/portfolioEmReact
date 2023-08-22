@@ -1,5 +1,6 @@
 import React from "react"
 import { StyledMenu } from "./styles"
+import PropTypes from "prop-types"
 
 export default function Menu(props) {
 
@@ -70,4 +71,11 @@ export default function Menu(props) {
             {menuOption()}
         </StyledMenu>
     )
+}
+
+Menu.PropTypes = {
+    numDots: PropTypes.number.isRequired,
+    functionality: PropTypes.string.isRequired,
+    profitability: PropTypes.string.isRequired,
+    apprenticeship: PropTypes.string.isRequired
 }

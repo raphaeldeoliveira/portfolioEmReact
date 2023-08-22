@@ -2,6 +2,7 @@ import React from "react"
 import { StyledHeader , DivSeccaoDireitaHeader , ToggleLanguage } from './styles'
 import Button from "./Button"
 import '../styles.scss'
+import PropTypes from "prop-types"
 
 export default function Header(props) {
 
@@ -65,4 +66,8 @@ export default function Header(props) {
             </DivSeccaoDireitaHeader>
         </StyledHeader>
     )
+}
+
+Header.PropTypes = {
+    scrollTo: PropTypes.func.isRequired
 }

@@ -3,7 +3,7 @@ import { StyledPanel } from "./styles"
 
 import CarrouselPanel from "./CarrouselPanel"
 
-export default function ProjectContent(props) {
+export default function ProjectContent() {
 
     const [currentProject, setCurrentProject] = React.useState(0)
     const [projectData, setProjectData] = React.useState({

@@ -2,6 +2,7 @@ import React from "react"
 import { StyledCarrouselPanel, DotsTable } from "./styles"
 import Menu from "./Menu"
 import CarrouselImages from "./CarrouselImages"
+import PropTypes from "prop-types"
 
 export default function CarrouselPanel(props) {
 
@@ -99,4 +100,13 @@ export default function CarrouselPanel(props) {
         </StyledCarrouselPanel>
     )
 
+}
+
+CarrouselPanel.PropTypes = {
+    numDots: PropTypes.number.isRequired,
+    id: PropTypes.number.isRequired,
+    description: PropTypes.string.isRequired,
+    functionality: PropTypes.string.isRequired,
+    profitability: PropTypes.string.isRequired,
+    apprenticeship: PropTypes.string.isRequired
 }

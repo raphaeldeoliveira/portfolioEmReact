@@ -1,6 +1,7 @@
 import React from "react"
 import Carrousel from "./Carrousel"
 import { StyledCard } from "./styles"
+import PropTypes from "prop-types"
 
 export default function Card(props) {
 
@@ -18,4 +19,14 @@ export default function Card(props) {
             />
         </StyledCard>
     )
+}
+
+Card.PropTypes = {
+    scrollTo: PropTypes.func.isRequired,
+    projectName: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    primeiraImagem: PropTypes.string.isRequired,
+    segundaImagem: PropTypes.string.isRequired,
+    terceiraImagem: PropTypes.string.isRequired
 }

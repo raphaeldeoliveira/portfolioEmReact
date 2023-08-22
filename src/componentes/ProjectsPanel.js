@@ -2,6 +2,7 @@ import React from "react"
 import Card from "./Card"
 import CardLeetCode from "./CardLeetCode"
 import { StyledGrid } from "./styles"
+import PropTypes from "prop-types"
 
 import photoAngelModasOne from "../images/project-cards/angelProject1.png";
 import photoAngelModasTwo from "../images/project-cards/angelProject2.png";
@@ -61,4 +62,8 @@ export default function ProjectsPanel(props) {
             />
         </StyledGrid>
     )
+}
+
+ProjectsPanel.PropTypes = {
+    scrollTo: PropTypes.func.isRequired
 }

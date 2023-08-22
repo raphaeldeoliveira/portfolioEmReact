@@ -1,5 +1,6 @@
 import React from "react"
 import { StyledCarrousel } from "./styles"
+import PropTypes from "prop-types"
 
 export default function Carrousel(props) {
 
@@ -31,4 +32,10 @@ export default function Carrousel(props) {
             <span onClick={changeRight} className="flecha-direita">❯</span>
         </StyledCarrousel>
     )
+}
+
+Carrousel.PropTypes = {
+    primeiraImagem: PropTypes.string.isRequired,
+    segundaImagem: PropTypes.string.isRequired,
+    terceiraImagem: PropTypes.string.isRequired
 }

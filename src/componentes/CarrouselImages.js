@@ -19,6 +19,7 @@ import extensaoThree from "../images/project-images/projetoExtensao3.png"
 import extensaoFour from "../images/project-images/projetoExtensao4.png"
 
 import { StyledCarrouselImages } from "./styles"
+import PropTypes from "prop-types"
 
 export default function CarrouselImages(props) {
 
@@ -72,4 +73,9 @@ export default function CarrouselImages(props) {
             {images()}
         </StyledCarrouselImages>
     )
+}
+
+CarrouselImages.PropTypes = {
+    numDots: PropTypes.number.isRequired,
+    deslocamento: PropTypes.number.isRequired,
 }
