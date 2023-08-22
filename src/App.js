@@ -10,6 +10,13 @@ import "./styles.scss"
 //import idiomaEn from "./componentes/idiomaEN"
 
 function App() {
+
+  //const [idiomaToogle, setIdiomaToogle] = React.useState(false)
+  //const [idioma, setIdioma] = React.useState([])
+
+  function mudarIdioma() {
+
+  }
   
   function scrollToButton(destino) {
     const elemento = document.getElementById(destino)
@@ -31,7 +38,7 @@ function App() {
   return (
     <div className="App">
       <Header
-        //mudarIdioma={mudarIdioma}
+        mudarIdioma={mudarIdioma}
         //botao1={idioma[0].text1}
         //botao2={idioma[1].text2}
         scrollTo={scrollToButton}
