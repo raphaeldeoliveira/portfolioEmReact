@@ -6,24 +6,11 @@ import ProjectContent from "./componentes/ProjectContent"
 import Footer from "./componentes/Footer"
 
 import "./styles.scss"
-import idiomaBr from "./componentes/idiomaBR"
-import idiomaEn from "./componentes/idiomaEN"
+//import idiomaBr from "./componentes/idiomaBR"
+//import idiomaEn from "./componentes/idiomaEN"
 
 function App() {
   
-  const [idiomaToogle, setIdiomaToogle] = React.useState(false)
-  const [idioma, setIdioma] = React.useState([])
-
-  function mudarIdioma() {
-    /*idiomaEn.forEach(texto => {
-      setIdioma(prevIdioma => [...prevIdioma, texto]);
-    });*/
-  }
-
-  /*React.useEffect(() => {
-    mudarIdioma()
-  }, [])*/
-
   function scrollToButton(destino) {
     const elemento = document.getElementById(destino)
     if (elemento) {
@@ -43,21 +30,21 @@ function App() {
   
   return (
     <div className="App">
-      {/*<Header
+      <Header
         mudarIdioma={mudarIdioma}
         //botao1={idioma[0].text1}
         //botao2={idioma[1].text2}
         scrollTo={scrollToButton}
-    />*/}
+    />
       <MainContent
 
       />
-      {/*<ProjectsPanel
+      <ProjectsPanel
         scrollTo={scrollToProject}
       />
       <ProjectContent />
 
-  <Footer />*/}
+      <Footer />
 
     </div>
   );

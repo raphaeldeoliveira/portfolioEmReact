@@ -23,7 +23,7 @@ export default function MainContent() {
         <StyledMainContent>
             <StyledPhotoProfile>
                 <img src={activeResume ? PhotoStuding : PhotoDefault} />
-                <span>That's Me!</span>
+                <span>That&#39;s Me!</span>
             </StyledPhotoProfile>
             <div className="conteudoCentral">
                 <StyledResume
@@ -34,7 +34,7 @@ export default function MainContent() {
                     <h1>RAPHAEL</h1>
                     <h1 className="sobrenome">CARVALHO</h1>
                     <p>
-                    I'm a student of computer cience on Instituto Federal de Santa Catarina. Focused on becoming a fullstack developer. My actual skills is: Html, Css, <span className="sublinhado-js">Javascript</span> , <span className="sublinhado-vue">Vue</span> and <span className="sublinhado-java">Java</span> whit <span className="sublinhado-spring">Spring Boot</span>. But studying to become a great programmer. I have so much interesse in tech and search upgrade my skills day by day.
+                    I&#39;m a student of computer cience on Instituto Federal de Santa Catarina. Focused on becoming a fullstack developer. My actual skills is: Html, Css, <span className="sublinhado-js">Javascript</span> , <span className="sublinhado-vue">Vue</span> and <span className="sublinhado-java">Java</span> whit <span className="sublinhado-spring">Spring Boot</span>. But studying to become a great programmer. I have so much interesse in tech and search upgrade my skills day by day.
                     </p>
                 </StyledResume>
                 <StyledCurriculum
@@ -53,7 +53,7 @@ export default function MainContent() {
                     </div>
                     <br/>
                     <div className="two-text">
-                        <span className="left-text italic">Bachelor's Degree in Computer Science</span>
+                        <span className="left-text italic">Bachelor&#39;s Degree in Computer Science</span>
                         <span className="right-text italic">2022 - present</span>
                     </div>
                     <br/>

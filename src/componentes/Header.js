@@ -6,11 +6,11 @@ import '../styles.scss'
 export default function Header(props) {
 
     const [nomeSobrenome, setNomeSobrenome] = React.useState(true);
-    const [larguraTela, setlarguraTela] = React.useState(window.innerWidth)
+    //const [larguraTela, setlarguraTela] = React.useState(window.innerWidth)
 
     const resizer = () => {
         setNomeSobrenome(window.innerWidth <= 760 ? false : true)
-        setlarguraTela(window.innerWidth)
+        //setlarguraTela(window.innerWidth)
     }
 
     React.useEffect(() => {
