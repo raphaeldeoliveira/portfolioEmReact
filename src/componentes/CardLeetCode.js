@@ -17,7 +17,7 @@ export default function CardLeetCode(props) {
     )
 }
 
-CardLeetCode.PropTypes = {
+CardLeetCode.propTypes = {
     link: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,

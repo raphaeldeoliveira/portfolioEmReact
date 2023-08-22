@@ -34,7 +34,7 @@ export default function Carrousel(props) {
     )
 }
 
-Carrousel.PropTypes = {
+Carrousel.propTypes = {
     primeiraImagem: PropTypes.string.isRequired,
     segundaImagem: PropTypes.string.isRequired,
     terceiraImagem: PropTypes.string.isRequired

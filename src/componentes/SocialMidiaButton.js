@@ -11,7 +11,7 @@ export default function SocialMidiaButton(props) {
     )
 }
 
-SocialMidiaButton.PropTypes = {
+SocialMidiaButton.propTypes = {
     link: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired
 }

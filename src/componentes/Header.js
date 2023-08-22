@@ -68,6 +68,7 @@ export default function Header(props) {
     )
 }
 
-Header.PropTypes = {
-    scrollTo: PropTypes.func.isRequired
+Header.propTypes = {
+    scrollTo: PropTypes.func.isRequired,
+    mudarIdioma: PropTypes.func.isRequired
 }

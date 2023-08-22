@@ -75,7 +75,7 @@ export default function CarrouselImages(props) {
     )
 }
 
-CarrouselImages.PropTypes = {
+CarrouselImages.propTypes = {
     numDots: PropTypes.number.isRequired,
     deslocamento: PropTypes.number.isRequired,
 }

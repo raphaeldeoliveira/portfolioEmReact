@@ -64,6 +64,6 @@ export default function ProjectsPanel(props) {
     )
 }
 
-ProjectsPanel.PropTypes = {
+ProjectsPanel.propTypes = {
     scrollTo: PropTypes.func.isRequired
 }

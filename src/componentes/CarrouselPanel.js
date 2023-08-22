@@ -102,7 +102,7 @@ export default function CarrouselPanel(props) {
 
 }
 
-CarrouselPanel.PropTypes = {
+CarrouselPanel.propTypes = {
     numDots: PropTypes.number.isRequired,
     id: PropTypes.number.isRequired,
     description: PropTypes.string.isRequired,

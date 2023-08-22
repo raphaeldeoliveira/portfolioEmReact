@@ -73,7 +73,7 @@ export default function Menu(props) {
     )
 }
 
-Menu.PropTypes = {
+Menu.propTypes = {
     numDots: PropTypes.number.isRequired,
     functionality: PropTypes.string.isRequired,
     profitability: PropTypes.string.isRequired,

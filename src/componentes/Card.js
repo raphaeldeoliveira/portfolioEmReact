@@ -21,12 +21,12 @@ export default function Card(props) {
     )
 }
 
-Card.PropTypes = {
-    scrollTo: PropTypes.func.isRequired,
-    projectName: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    primeiraImagem: PropTypes.string.isRequired,
-    segundaImagem: PropTypes.string.isRequired,
-    terceiraImagem: PropTypes.string.isRequired
+Card.propTypes = {
+    scrollTo: PropTypes.func,
+    projectName: PropTypes.string,
+    title: PropTypes.string,
+    description: PropTypes.string,
+    primeiraImagem: PropTypes.string,
+    segundaImagem: PropTypes.string,
+    terceiraImagem: PropTypes.string
 }
