@@ -38,12 +38,12 @@ export default function Header(props) {
             </div>
             <DivSeccaoDireitaHeader>
                 <Button 
-                    buttonText="Projects"
+                    buttonText={props.button1text}
                     scrollTo={props.scrollTo}
                     scrollName="cardProjects"
                 />
                 <Button 
-                    buttonText="Contact"
+                    buttonText={props.button2text}
                     scrollTo={props.scrollTo}
                     scrollName="socialMedias"
                 />
@@ -69,6 +69,8 @@ export default function Header(props) {
 }
 
 Header.propTypes = {
+    button1text: PropTypes.string.isRequired,
+    button2text: PropTypes.string.isRequired,
     scrollTo: PropTypes.func.isRequired,
     mudarIdioma: PropTypes.func.isRequired
 }

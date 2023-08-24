@@ -84,6 +84,10 @@ export default function CarrouselPanel(props) {
                     functionality= {props.functionality}
                     profitability= {props.profitability}
                     apprenticeship= {props.apprenticeship}
+
+                    titleOptionMenu1={props.titleOptionMenu1}
+                    titleOptionMenu2={props.titleOptionMenu2}
+                    titleOptionMenu3={props.titleOptionMenu3}
                 />
                 <div>
                     <CarrouselImages 
@@ -108,5 +112,8 @@ CarrouselPanel.propTypes = {
     description: PropTypes.string.isRequired,
     functionality: PropTypes.string.isRequired,
     profitability: PropTypes.string.isRequired,
-    apprenticeship: PropTypes.string.isRequired
+    apprenticeship: PropTypes.string.isRequired,
+    titleOptionMenu1: PropTypes.string.isRequired,
+    titleOptionMenu2: PropTypes.string.isRequired,
+    titleOptionMenu3: PropTypes.string.isRequired
 }

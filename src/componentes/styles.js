@@ -13,6 +13,7 @@ export const StyledHeader = styled.header`
     span {
         font-size: 2rem;
         font-weight: bold;
+        user-select: none;
     }
 
     .sobrenome {
@@ -90,12 +91,13 @@ export const ToggleLanguage = styled.div`
     padding-top: 5px;
     padding-right: 8px;
     color: none;
+    user-select: none;
   }
 
   .br-toogle {
     padding-top: 5px;
     padding-left: 8px;
-    //color: gray;
+    user-select: none;
   }
 
   @media (max-width: 760px) {
@@ -157,6 +159,7 @@ export const ToggleLanguage = styled.div`
 `;
 
 export const StyledButton = styled.button`
+    user-select: none;
     background-color: #121212;
     color: white;
     border: none;
@@ -198,6 +201,7 @@ export const StyledPhotoProfile = styled.div`
   flex-direction: column;
 
   img {
+    user-select: none;
     width: 400px;
     margin: auto;
     margin-top: 45px;
@@ -206,6 +210,7 @@ export const StyledPhotoProfile = styled.div`
   }
 
   span {
+    user-select: none;
     margin-top: 20px;
     font-weight: bold;
     text-align: center;
@@ -254,6 +259,7 @@ export const StyledResume = styled.div`
   h1 {
     font-size: 4.5rem;
     text-shadow: 10px 10px black;
+    user-select: none;
   }
 
   .sobrenome {
@@ -265,6 +271,7 @@ export const StyledResume = styled.div`
     margin-top: 15px;
     font-size: 20px;
     line-height: 28px;
+    user-select: none;
   }
 
   @media (max-width: 1150px) {
@@ -469,6 +476,7 @@ export const StyledCard = styled.div`
   margin-top: 1.5vw;
   margin-bottom: 1.5vw;
   display: flex;
+  user-select: none;
 
   transition: all 0.3s ease-in-out;
 
@@ -633,6 +641,7 @@ export const StyledPanel = styled.div`
   
   padding: 50px;
   transition: all 0.3s ease-in-out;
+  user-select: none;
 
   .carrousel-de-paineis {
     overflow: hidden;
@@ -705,6 +714,7 @@ export const StyledPanel = styled.div`
   .header-project-content {
     height: 4.8vw;
     padding-top: 30px;
+    padding-left: 70px;
   }
 
   .flex {
@@ -881,7 +891,7 @@ export const StyledFooter = styled.footer`
 
   background-color: #121212;
   padding: 20px;
-  
+  user-select: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -898,6 +908,7 @@ export const StyledFooter = styled.footer`
     //font-size: 2.2vw;
     font-size: 30px;
     margin-left: 5px;
+    user-select: none;
   }
 
   .sobrenome-footer {
@@ -911,19 +922,39 @@ export const StyledFooter = styled.footer`
     display: flex;
   }
 
-  .botton-email {
+  .button-email {
     background-color: transparent;
     border: none;
     cursor: pointer;
     width: 70px;
     height: 70px;
     padding: 0;
+    position: relative;
+  }
+
+  .dialog-box {
+    display: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    background-color: #333;
+    font-size: 1.3vw;
+    text-align: center;
+    z-index: 0;
+    position: absolute;
+    top: 14px;
+    left: -6px;
   }
   
   .image-logo-mail {
     width: 70px;
     height: 70px;
     border-radius: 10px;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   .image-logo-mail:hover {
@@ -997,13 +1028,19 @@ export const StyledCarrouselPanel = styled.div`
   //background-color: purple;
   //height: 500px;
   margin-bottom: 25px;
+  //width: 1300px;
+  //width: 85%;
+  //margin: auto;
 
   .project-content-p {
     font-size: 1.2vw;
+    width: 87%;
+    margin: auto;
   }
 
   .flex {
     display: flex;
+    justify-content: center;
   }
 
   .dots {

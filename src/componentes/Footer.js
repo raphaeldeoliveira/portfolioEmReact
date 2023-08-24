@@ -7,7 +7,26 @@ import logoMail from "../images/social-midias/email-sf.png"
 import logoGithub from "../images/social-midias/github-sf.png"
 import logoLinkedin from "../images/social-midias/linkedin-sf.png"
 
-export default function Footer() {
+import PropTypes from "prop-types"
+
+export default function Footer(props) {
+
+    const [showDialogMsg, setShowDialogMsg] = React.useState(false)
+
+    function showDialogMessage() {
+        
+        const tempTextArea = document.createElement("textarea");
+        tempTextArea.value = "rafaolive3003@gmail.com";
+        document.body.appendChild(tempTextArea);
+        tempTextArea.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempTextArea);
+        
+        setTimeout(() => {
+            setShowDialogMsg((prevShow) => !prevShow)
+        }, 1000);
+        setShowDialogMsg((prevShow) => !prevShow)
+    }
 
     return (
         <StyledFooter id="socialMedias">
@@ -19,9 +38,16 @@ export default function Footer() {
                 <div className="barra"></div>
             </div>
             <div className="flex">
-                <button className="botton-email">
-                    <span></span>
-                    <img className="image-logo-mail" src={logoMail}/>
+                <button onClick={showDialogMessage} className="button-email">
+                    <span 
+                        className="dialog-box"
+                        style={{ display: showDialogMsg ? "inline" : "none" }}
+                    >{props.messageClickMailButton}</span>
+                    <img 
+                        className="image-logo-mail" 
+                        src={logoMail}
+                        style={{ display: showDialogMsg ? "none" : "inline" }}
+                    />
                 </button>
                 <SocialMidiaButton 
                     link="https://www.linkedin.com/in/raphael-de-oliveira-carvalho-a6b133253/"
@@ -38,4 +64,8 @@ export default function Footer() {
             </div>
         </StyledFooter>
     )
+}
+
+Footer.propTypes = {
+    messageClickMailButton: PropTypes.string.isRequired
 }

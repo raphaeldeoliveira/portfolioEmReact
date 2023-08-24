@@ -22,7 +22,7 @@ body {
 
 .posicao-bolinha-direita {
     float: right;
-    animation: esq-dir 500ms ease;
+    animation: esq-dir 200ms ease;
 }
 
 @keyframes dir-esq {
@@ -58,7 +58,7 @@ body {
 
 .posicao-bolinha-esquerda {
     float: left;
-    animation: dir-esq 500ms ease;
+    animation: dir-esq 200ms ease;
 }
 
 .idioma-on-text {

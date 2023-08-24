@@ -23,12 +23,11 @@ import photoLeetcode from "../images/project-cards/leetcode.png"
 
 export default function ProjectsPanel(props) {
 
-
     return (
         <StyledGrid id="cardProjects">
             <Card 
-                title={"FIFA Bot Project"}
-                description={"This project is divided into three subprojects: the creation of the sales website, the development of a product (a browser extension), and the implementation of a REST API in Docker for user creation on the website."}
+                title={props.titleProject1}
+                description={props.cardParagrap1}
                 primeiraImagem={photoFifaOne}
                 segundaImagem={photoFifaTwo}
                 terceiraImagem={photoFifaThree}
@@ -36,8 +35,8 @@ export default function ProjectsPanel(props) {
                 projectName="fifabot"
             />
             <Card 
-                title="Programming teaching platform"
-                description="This is a extension project of university which i went a front-end devolpment, building all css components and build interactivites with Vue"
+                title={props.titleProject2}
+                description={props.cardParagrap2}
                 primeiraImagem={photoProExtOne}
                 segundaImagem={photoProExtTwo}
                 terceiraImagem={photoProExtThree}
@@ -45,8 +44,8 @@ export default function ProjectsPanel(props) {
                 projectName="extension"
             />
             <Card 
-                title="Angel Modas"
-                description="This is a stock management system project created for my girlfriend's store. The idea is to have control over the products sold, track profits, among other aspects."
+                title={props.titleProject3}
+                description={props.cardParagrap3}
                 primeiraImagem={photoAngelModasOne}
                 segundaImagem={photoAngelModasTwo}
                 terceiraImagem={photoAngelModasThree}
@@ -54,8 +53,8 @@ export default function ProjectsPanel(props) {
                 projectName="angelmodas"
             />
             <CardLeetCode
-                title="My leetcode profile"
-                description="This is to demonstrate my knowledge of programming logic. All the problems are solved using the Java language."
+                title={props.titleProject4}
+                description={props.cardParagrap4}
                 image={photoLeetcode}
                 link="https://leetcode.com/raphaeloc/"
                 
@@ -65,5 +64,13 @@ export default function ProjectsPanel(props) {
 }
 
 ProjectsPanel.propTypes = {
-    scrollTo: PropTypes.func.isRequired
+    scrollTo: PropTypes.func.isRequired,
+    titleProject1: PropTypes.string.isRequired,
+    cardParagrap1: PropTypes.string.isRequired,
+    titleProject2: PropTypes.string.isRequired,
+    cardParagrap2: PropTypes.string.isRequired,
+    titleProject3: PropTypes.string.isRequired,
+    cardParagrap3: PropTypes.string.isRequired,
+    titleProject4: PropTypes.string.isRequired,
+    cardParagrap4: PropTypes.string.isRequired,
 }

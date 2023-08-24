@@ -3,41 +3,39 @@ import { StyledPanel } from "./styles"
 
 import CarrouselPanel from "./CarrouselPanel"
 
-export default function ProjectContent() {
+import PropTypes from "prop-types"
+
+export default function ProjectContent(props) {
 
     const [currentProject, setCurrentProject] = React.useState(0)
-    const [projectData, setProjectData] = React.useState({
-        title: "FIFA Bot Project",
-        link: "https://github.com/raphaeldeoliveira/FIFABOT"
-    })
+    const [projectLink, setProjectLink] = React.useState("https://github.com/raphaeldeoliveira/FIFABOT")
+    const [title, setTitle] = React.useState(props.titleProject1)
     const [translateY, setTranslateY] = React.useState(0)
+
+    React.useEffect(() => {
+        setTitle(props.titleProject1);
+    }, [props.titleProject1]);
 
     function setVariableWithCurrentProject(currentId) {
         if (currentId === 0) {
             setTranslateY(0)
             setTimeout(() => {
-                setProjectData({
-                    title: "FIFA Bot Project",
-                    link: "https://github.com/raphaeldeoliveira/FIFABOT"
-                })
+                setTitle(props.titleProject1)
+                setProjectLink("https://github.com/raphaeldeoliveira/FIFABOT")
             }, 500)
         }
         else if (currentId === 1) {
             setTranslateY(-522.5)
             setTimeout(() => {
-                setProjectData({
-                    title: "Programming teaching platform",
-                    link: "https://github.com/raphaeldeoliveira/PlataformaEnsino"
-                })
+                setTitle(props.titleProject2)
+                setProjectLink("https://github.com/raphaeldeoliveira/PlataformaEnsino")
             }, 500)
         }
         else {
             setTranslateY(-1045)
             setTimeout(() => {
-                setProjectData({
-                    title: "Angel Modas",
-                    link: "https://github.com/raphaeldeoliveira/LojaRoupaApp"
-                })
+                setTitle(props.titleProject3)
+                setProjectLink("https://github.com/raphaeldeoliveira/LojaRoupaApp")
             }, 500)
         }
     }
@@ -77,8 +75,8 @@ export default function ProjectContent() {
                 <h2 className={
                     transicaoTitulo ? "transicaoTitulo" : ""
                 }
-                onClick={() => window.open(projectData.link, '_blank')}
-                >{projectData.title}
+                onClick={() => window.open(projectLink, '_blank')}
+                >{title}
                 </h2>
             </div>
             <div className="carrousel-de-paineis">
@@ -89,47 +87,77 @@ export default function ProjectContent() {
                     }}
                 >
                     <CarrouselPanel 
-                        projectData= {projectData}
                         currentProject= {currentProject}
 
                         // FIFA
                         numDots={6}
-                        description="This is my most robust project. I created a product: an extension capable of earning coins in FIFA. In addition to the tool, a website was developed, which is a complete system with integrated back-end and front-end connected to a database."
+                        description={props.contentParagraph1}
 
-                        functionality="The software will be a browser extension written in Javascript. The user will need a login and password to access the program, which may or may not be maintained depending on the payment of the monthly fee. The website's REST API was written in Java with Spring Boot. As for the website's front-end, it was written in Vue. For the database, I used MySQL in a Docker container."
-                        profitability="The sources of income for the system will be through sales of system subscriptions and the sale of in-game currency (which will be earned through the software itself)."
-                        apprenticeship="The main lesson I learned from this project was the importance of creating a robust and scalable product that can efficiently meet the needs of users. Through the software, I learned JS and gained an understanding of security principles and authentication to implement the login and password system. Furthermore, integrating the back-end and front-end of the website allowed me to explore different technologies and frameworks, such as Java with Spring Boot for the REST API and Vue for the front-end. Configuring the database with MySQL and Docker provided me with knowledge of storing and efficiently managing system data."
+                        functionality={props.menuText11}
+                        profitability={props.menuText12}
+                        apprenticeship={props.menuText13}
+
+                        titleOptionMenu1={props.titleOptionMenu1}
+                        titleOptionMenu2={props.titleOptionMenu2}
+                        titleOptionMenu3={props.titleOptionMenu3}
+
                         id="fifabot"
                     />
                     <CarrouselPanel 
-                        projectData= {projectData}
                         currentProject= {currentProject}
 
                         // EXTENSÃO
                         numDots={4}
-                        description="A extension project was developed to assist beginners in programming by providing exercises and solutions in three languages: Java, JavaScript, and Python. In addition to myself, 15 other students contributed to the development."
+                        description={props.contentParagraph2}
 
-                        functionality="The project features 500 programming exercises divided into easy, medium, and difficult levels. All exercises have been solved by students participating in the project. The exercise topics cover expressions, selection, loops, arrays, strings, matrices, and functions."
-                        apprenticeship="Through this project, I have learned how to utilize media queries and make the website fully responsive. Additionally, I have gained knowledge in working with Vue.js and creating more advanced interactions. My ability to create stylish components (CSS) and understanding of design principles such as color harmony and font selection have also significantly improved."
+                        functionality={props.menuText21}
+                        apprenticeship={props.menuText23}
+
+                        titleOptionMenu1={props.titleOptionMenu1}
+                        titleOptionMenu2={props.titleOptionMenu2}
+                        titleOptionMenu3={props.titleOptionMenu3}
+
                         id="extension"
                     />
                     <CarrouselPanel 
-                        projectData= {projectData}
                         currentProject= {currentProject}
 
                         // ANGEL MODAS
                         numDots={5}
-                        description="A project to assist in sales management and financial control for a clothing store, keeping track of investment, revenue, profit, and projections. The design was specifically tailored for my girlfriend."
+                        description={props.contentParagraph3}
 
-                        functionality="The system features a main menu with options for investment, revenue, and profit (actual and expected). These data are entered through the input of products purchased for resale. Products can be sold, returned, or lost, and they are organized in separate lists for available and sold items. The system also includes search bars and filters to easily find products in both lists."
-                        apprenticeship="Through this project, I gained a solid understanding of object-oriented programming and learned to implement the MVC (Model-View-Controller) design pattern. Additionally, I acquired skills in creating user interfaces using the Swing framework (Java)."
+                        functionality={props.menuText31}
+                        apprenticeship={props.menuText33}
+
+                        titleOptionMenu1={props.titleOptionMenu1}
+                        titleOptionMenu2={props.titleOptionMenu2}
+                        titleOptionMenu3={props.titleOptionMenu3}
+
                         id="angelmodas"
                     />
                 </div>
                 
             </div>
             
-            
         </StyledPanel>
     )
+}
+
+ProjectContent.propTypes = {
+    titleProject1: PropTypes.string.isRequired,
+    titleProject2: PropTypes.string.isRequired,
+    titleProject3: PropTypes.string.isRequired,
+    contentParagraph1: PropTypes.string.isRequired,
+    contentParagraph2: PropTypes.string.isRequired,
+    contentParagraph3: PropTypes.string.isRequired,
+    menuText11: PropTypes.string.isRequired,
+    menuText12: PropTypes.string.isRequired,
+    menuText13: PropTypes.string.isRequired,
+    titleOptionMenu1: PropTypes.string.isRequired,
+    titleOptionMenu2: PropTypes.string.isRequired,
+    titleOptionMenu3: PropTypes.string.isRequired,
+    menuText21: PropTypes.string.isRequired,
+    menuText23: PropTypes.string.isRequired,
+    menuText31: PropTypes.string.isRequired,
+    menuText33: PropTypes.string.isRequired,
 }

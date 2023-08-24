@@ -6,7 +6,15 @@ export default function Menu(props) {
 
     const [showMenu, setShowMenu] = React.useState(false)
     const [textMenu, setTextMenu] = React.useState(props.functionality)
-    const [titleMenu, setTitleMenu] = React.useState("Functionality")
+    const [titleMenu, setTitleMenu] = React.useState(props.titleOptionMenu1)
+
+    React.useEffect(() => {
+        setTextMenu(props.functionality);
+    }, [props.functionality]);
+
+    React.useEffect(() => {
+        setTitleMenu(props.titleOptionMenu1);
+    }, [props.titleOptionMenu1]);
 
     function menuOption() {
         if (props.numDots === 6) {
@@ -17,18 +25,18 @@ export default function Menu(props) {
                     <div onClick={() => { 
                         showMenuOption(); 
                         setTextMenu(props.functionality);
-                        setTitleMenu("Functionality");
-                        }} className="card-option option-top">Functionality</div>
+                        setTitleMenu(props.titleOptionMenu1);
+                        }} className="card-option option-top">{props.titleOptionMenu1}</div>
                     <div onClick={() => { 
                         showMenuOption(); 
                         setTextMenu(props.profitability);
-                        setTitleMenu("Profitability");
-                        }} className="card-option option-middle">Profitability</div>
+                        setTitleMenu(props.titleOptionMenu2);
+                        }} className="card-option option-middle">{props.titleOptionMenu2}</div>
                     <div onClick={() => { 
                         showMenuOption(); 
                         setTextMenu(props.apprenticeship);
-                        setTitleMenu("Apprenticeship");
-                        }} className="card-option option-bottom">Apprenticeship</div>
+                        setTitleMenu(props.titleOptionMenu3);
+                        }} className="card-option option-bottom">{props.titleOptionMenu3}</div>
                 </div>
             )
         }
@@ -77,5 +85,8 @@ Menu.propTypes = {
     numDots: PropTypes.number.isRequired,
     functionality: PropTypes.string.isRequired,
     profitability: PropTypes.string.isRequired,
-    apprenticeship: PropTypes.string.isRequired
+    apprenticeship: PropTypes.string.isRequired,
+    titleOptionMenu1: PropTypes.string.isRequired,
+    titleOptionMenu2: PropTypes.string.isRequired,
+    titleOptionMenu3: PropTypes.string.isRequired
 }
