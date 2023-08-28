@@ -8,7 +8,7 @@ export default function Card(props) {
     return (
         
         <StyledCard>
-            <div onClick={() => props.scrollTo(props.projectName)} className="seccao-textos">
+            <div onClick={() => props.scrollTo(props.currentId)} className="seccao-textos">
                 <h4>{props.title}</h4>
                 <p>{props.description}</p>
             </div>
@@ -28,5 +28,6 @@ Card.propTypes = {
     description: PropTypes.string,
     primeiraImagem: PropTypes.string,
     segundaImagem: PropTypes.string,
-    terceiraImagem: PropTypes.string
+    terceiraImagem: PropTypes.string,
+    currentId: PropTypes.number
 }

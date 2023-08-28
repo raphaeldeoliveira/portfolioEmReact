@@ -7,62 +7,55 @@ import PropTypes from "prop-types"
 
 export default function ProjectContent(props) {
 
-    const [currentProject, setCurrentProject] = React.useState(0)
-    const [projectLink, setProjectLink] = React.useState("https://github.com/raphaeldeoliveira/FIFABOT")
-    const [title, setTitle] = React.useState(props.titleProject1)
-    const [translateY, setTranslateY] = React.useState(0)
-
     React.useEffect(() => {
-        setTitle(props.titleProject1);
+        props.setTitle(props.titleProject1);
     }, [props.titleProject1]);
 
     function setVariableWithCurrentProject(currentId) {
         if (currentId === 0) {
-            setTranslateY(0)
+            props.setTranslateY(0)
             setTimeout(() => {
-                setTitle(props.titleProject1)
-                setProjectLink("https://github.com/raphaeldeoliveira/FIFABOT")
+                props.setTitle(props.titleProject1)
+                props.setProjectLink("https://github.com/raphaeldeoliveira/FIFABOT")
             }, 500)
         }
         else if (currentId === 1) {
-            setTranslateY(-522.5)
+            props.setTranslateY(-38.25)
             setTimeout(() => {
-                setTitle(props.titleProject2)
-                setProjectLink("https://github.com/raphaeldeoliveira/PlataformaEnsino")
+                props.setTitle(props.titleProject2)
+                props.setProjectLink("https://github.com/raphaeldeoliveira/PlataformaEnsino")
             }, 500)
         }
         else {
-            setTranslateY(-1045)
+            props.setTranslateY(-76.5)
             setTimeout(() => {
-                setTitle(props.titleProject3)
-                setProjectLink("https://github.com/raphaeldeoliveira/LojaRoupaApp")
+                props.setTitle(props.titleProject3)
+                props.setProjectLink("https://github.com/raphaeldeoliveira/LojaRoupaApp")
             }, 500)
         }
     }
 
     function changeTop() {
-        let currentId = (currentProject === 0 ? 2 : currentProject - 1)
-        setCurrentProject((prevState) => prevState === 0 ? 2 : prevState - 1);
+        let currentId = (props.currentProject === 0 ? 2 : props.currentProject - 1)
+        props.setCurrentProject((prevState) => prevState === 0 ? 2 : prevState - 1);
         setVariableWithCurrentProject(currentId)
         changeTitle()
     }
 
     function changeBottom() {
-        let currentId = (currentProject === 2 ? 0 : currentProject + 1)
-        setCurrentProject((prevState) => prevState === 2 ? 0 : prevState + 1);
+        let currentId = (props.currentProject === 2 ? 0 : props.currentProject + 1)
+        props.setCurrentProject((prevState) => prevState === 2 ? 0 : prevState + 1);
         setVariableWithCurrentProject(currentId)
         changeTitle()
         setTimeout(() => {
         }, 1000)
     }
 
-    const [transicaoTitulo, setTransicaoTitulo] = React.useState(false)
-
     function changeTitle() {
         setTimeout(() => {
-            setTransicaoTitulo((prevTransicao) => !prevTransicao)
+            props.setTransicaoTitulo((prevTransicao) => !prevTransicao)
         }, 1000)
-        setTransicaoTitulo((prevTransicao) => !prevTransicao)
+        props.setTransicaoTitulo((prevTransicao) => !prevTransicao)
     }
 
     return (
@@ -73,21 +66,21 @@ export default function ProjectContent(props) {
                     <button onClick={changeBottom} className="trianguloBaixo">▼</button>
                 </div>
                 <h2 className={
-                    transicaoTitulo ? "transicaoTitulo" : ""
+                    props.transicaoTitulo ? "transicaoTitulo" : ""
                 }
-                onClick={() => window.open(projectLink, '_blank')}
-                >{title}
+                onClick={() => window.open(props.projectLink, '_blank')}
+                >{props.title}
                 </h2>
             </div>
             <div className="carrousel-de-paineis">
                 <div 
                     className="carousel-panel"
                     style={{
-                        transform: `translateY(${translateY}px)`
+                        transform: `translateY(${props.translateY}vw)`
                     }}
                 >
                     <CarrouselPanel 
-                        currentProject= {currentProject}
+                        currentProject= {props.currentProject}
 
                         // FIFA
                         numDots={6}
@@ -104,7 +97,7 @@ export default function ProjectContent(props) {
                         id="fifabot"
                     />
                     <CarrouselPanel 
-                        currentProject= {currentProject}
+                        currentProject= {props.currentProject}
 
                         // EXTENSÃO
                         numDots={4}
@@ -120,7 +113,7 @@ export default function ProjectContent(props) {
                         id="extension"
                     />
                     <CarrouselPanel 
-                        currentProject= {currentProject}
+                        currentProject= {props.currentProject}
 
                         // ANGEL MODAS
                         numDots={5}
@@ -160,4 +153,14 @@ ProjectContent.propTypes = {
     menuText23: PropTypes.string.isRequired,
     menuText31: PropTypes.string.isRequired,
     menuText33: PropTypes.string.isRequired,
+    translateY: PropTypes.number.isRequired,
+    setTranslateY: PropTypes.func.isRequired,
+    title: PropTypes.string.isRequired,
+    setTitle: PropTypes.func.isRequired,
+    projectLink: PropTypes.string.isRequired,
+    setProjectLink: PropTypes.func.isRequired,
+    transicaoTitulo: PropTypes.bool.isRequired,
+    setTransicaoTitulo: PropTypes.func.isRequired,
+    currentProject: PropTypes.number.isRequired,
+    setCurrentProject: PropTypes.func.isRequired
 }

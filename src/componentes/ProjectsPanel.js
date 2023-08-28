@@ -18,9 +18,6 @@ import photoProExtThree from "../images/project-cards/projetoWilson.png";
 
 import photoLeetcode from "../images/project-cards/leetcode.png"
 
-// Usar grid pra fazer os cards no projectpanel
-// Criar um card especial para o leetcode
-
 export default function ProjectsPanel(props) {
 
     return (
@@ -33,6 +30,7 @@ export default function ProjectsPanel(props) {
                 terceiraImagem={photoFifaThree}
                 scrollTo={props.scrollTo}
                 projectName="fifabot"
+                currentId={0}
             />
             <Card 
                 title={props.titleProject2}
@@ -42,6 +40,7 @@ export default function ProjectsPanel(props) {
                 terceiraImagem={photoProExtThree}
                 scrollTo={props.scrollTo}
                 projectName="extension"
+                currentId={1}
             />
             <Card 
                 title={props.titleProject3}
@@ -51,6 +50,7 @@ export default function ProjectsPanel(props) {
                 terceiraImagem={photoAngelModasThree}
                 scrollTo={props.scrollTo}
                 projectName="angelmodas"
+                currentId={2}
             />
             <CardLeetCode
                 title={props.titleProject4}

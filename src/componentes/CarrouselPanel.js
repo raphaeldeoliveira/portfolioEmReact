@@ -50,7 +50,7 @@ export default function CarrouselPanel(props) {
     }
 
     function changeImageLeft() {
-        // tratamento da bolinha
+        
         if (currentDot === 0) {
             setCurrentDot((props.numDots - 1))
             setDeslocamento(((props.numDots - 1) * -51.6))
@@ -62,7 +62,7 @@ export default function CarrouselPanel(props) {
     }
 
     function changeImageRight() {
-        // tratamento da bolinha
+        
         if (currentDot === (props.numDots - 1)) {
             setCurrentDot(0)
             setDeslocamento(0)
@@ -71,8 +71,6 @@ export default function CarrouselPanel(props) {
             setCurrentDot((prevDot) => prevDot + 1)
             setDeslocamento((prevDeslocamento) => prevDeslocamento - 51.6)
         }
-
-        // mudança imagem
     }
 
     return (

@@ -23,6 +23,14 @@ import PropTypes from "prop-types"
 
 export default function CarrouselImages(props) {
 
+    React.useEffect(() => {
+        currentWidth()
+    }, [window.innerWidth]);
+
+    function currentWidth() {
+        return `translateX(${props.deslocamento}vw)`
+    }
+
     function images() {
         if (props.numDots === 6) {
             return (
@@ -43,7 +51,7 @@ export default function CarrouselImages(props) {
             return (
                 <div className="carosel-images" 
                 style={{
-                    transform: `translateX(${props.deslocamento}vw)`
+                    transform: {currentWidth}
                 }}>
                     <img src={angelOne} />
                     <img src={angelTwo} />

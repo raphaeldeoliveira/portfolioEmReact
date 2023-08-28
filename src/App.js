@@ -12,6 +12,11 @@ import idiomaEn from "./componentes/idiomaEN"
 function App() {
 
   const [activeBr, setActiveBr] = React.useState(false)
+  const [translateY, setTranslateY] = React.useState(0)
+  const [projectLink, setProjectLink] = React.useState("https://github.com/raphaeldeoliveira/FIFABOT")
+  const [title, setTitle] = React.useState("FIFA Bot Project")
+  const [transicaoTitulo, setTransicaoTitulo] = React.useState(false)
+  const [currentProject, setCurrentProject] = React.useState(0)
 
   function mudarIdioma() {
     setActiveBr((prevState) => !prevState)
@@ -24,14 +29,38 @@ function App() {
     }
   }
 
-  function scrollToProject(destino) {
-    const elemento = document.getElementById(destino)
-      if (elemento) {
-        elemento.scrollIntoView({ behavior: 'smooth' })
-      }
+  function scrollToProject(currentId) {
+    
+    document.getElementById("section-projects").scrollIntoView({ behavior: 'smooth' })
+
     setTimeout(() => {
-      document.getElementById("section-projects").scrollIntoView({ behavior: 'smooth' })
-    }, 1200);
+      if (currentId == 0) {
+        setTranslateY(0)
+        setTimeout(() => {
+          setTitle((activeBr ? idiomaBr.titleProject1 : idiomaEn.titleProject1))
+          setProjectLink("https://github.com/raphaeldeoliveira/FIFABOT")
+        }, 500)
+      } else if (currentId == 1) {
+        setTranslateY(-38.25)
+        setTimeout(() => {
+          setTitle((activeBr ? idiomaBr.titleProject2 : idiomaEn.titleProject2))
+          setProjectLink("https://github.com/raphaeldeoliveira/PlataformaEnsino")
+        }, 500)
+      } else {
+        setTranslateY(-76.5)
+        setTimeout(() => {
+          setTitle((activeBr ? idiomaBr.titleProject3 : idiomaEn.titleProject3))
+          setProjectLink("https://github.com/raphaeldeoliveira/LojaRoupaApp")
+        }, 500)
+      }
+      if (currentId !== currentProject) {
+        setTimeout(() => {
+          setTransicaoTitulo((prevTransicao) => !prevTransicao)
+        }, 1000)
+        setTransicaoTitulo((prevTransicao) => !prevTransicao)
+      }
+      setCurrentProject(currentId)
+    }, 400);
   }
   
   return (
@@ -71,6 +100,7 @@ function App() {
       />
       <ProjectsPanel
         scrollTo={scrollToProject}
+        setTranslateY={setTranslateY}
         titleProject1={(activeBr ? idiomaBr.titleProject1 : idiomaEn.titleProject1)}
         cardParagrap1={(activeBr ? idiomaBr.cardParagrap1 : idiomaEn.cardParagrap1)}
         titleProject2={(activeBr ? idiomaBr.titleProject2 : idiomaEn.titleProject2)}
@@ -79,6 +109,7 @@ function App() {
         cardParagrap3={(activeBr ? idiomaBr.cardParagrap3 : idiomaEn.cardParagrap3)}
         titleProject4={(activeBr ? idiomaBr.titleProject4 : idiomaEn.titleProject4)}
         cardParagrap4={(activeBr ? idiomaBr.cardParagrap4 : idiomaEn.cardParagrap4)}
+        currentProject={currentProject}
       />
       <ProjectContent 
         titleProject1={(activeBr ? idiomaBr.titleProject1 : idiomaEn.titleProject1)}
@@ -104,7 +135,16 @@ function App() {
         menuText31={(activeBr ? idiomaBr.menuText31 : idiomaEn.menuText31)}
         menuText32={(activeBr ? idiomaBr.menuText32 : idiomaEn.menuText32)}
         menuText33={(activeBr ? idiomaBr.menuText33 : idiomaEn.menuText33)}
-
+        translateY={translateY}
+        setTranslateY={setTranslateY}
+        title={title}
+        setTitle={setTitle}
+        projectLink={projectLink}
+        setProjectLink={setProjectLink}
+        transicaoTitulo={transicaoTitulo}
+        setTransicaoTitulo={setTransicaoTitulo}
+        currentProject={currentProject}
+        setCurrentProject={setCurrentProject}
       />
 
       <Footer 

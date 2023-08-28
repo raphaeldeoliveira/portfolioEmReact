@@ -646,7 +646,8 @@ export const StyledPanel = styled.div`
   .carrousel-de-paineis {
     overflow: hidden;
     position: relative;
-    height: 500px;
+    //height: 500px;
+    height: 85.51vh;
   }
 
   .carousel-panel {
@@ -709,6 +710,7 @@ export const StyledPanel = styled.div`
     display: flex;
     flex-direction: column;
     float: left;
+    margin-right: 12px;
   }
 
   .header-project-content {
