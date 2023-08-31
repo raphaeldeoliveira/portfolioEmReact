@@ -20,14 +20,16 @@ export default function ProjectContent(props) {
             }, 500)
         }
         else if (currentId === 1) {
-            props.setTranslateY(-38.25)
+            //props.setTranslateY(-38.25)
+            props.setTranslateY(props.mobile ? -80 : -38.27)
             setTimeout(() => {
                 props.setTitle(props.titleProject2)
                 props.setProjectLink("https://github.com/raphaeldeoliveira/PlataformaEnsino")
             }, 500)
         }
         else {
-            props.setTranslateY(-76.5)
+            //props.setTranslateY(-76.5)
+            props.setTranslateY(props.mobile ? -160 : -76.54)
             setTimeout(() => {
                 props.setTitle(props.titleProject3)
                 props.setProjectLink("https://github.com/raphaeldeoliveira/LojaRoupaApp")
@@ -162,5 +164,6 @@ ProjectContent.propTypes = {
     transicaoTitulo: PropTypes.bool.isRequired,
     setTransicaoTitulo: PropTypes.func.isRequired,
     currentProject: PropTypes.number.isRequired,
-    setCurrentProject: PropTypes.func.isRequired
+    setCurrentProject: PropTypes.func.isRequired,
+    mobile: PropTypes.bool.isRequired
 }

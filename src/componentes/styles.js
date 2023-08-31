@@ -212,6 +212,7 @@ export const StyledPhotoProfile = styled.div`
   span {
     user-select: none;
     margin-top: 20px;
+    margin-bottom: 35px;
     font-weight: bold;
     text-align: center;
     display: block;
@@ -229,7 +230,6 @@ export const StyledPhotoProfile = styled.div`
 
     span {
       margin-top: 20px;
-      margin-bottom: 55px;
       font-size: 1.725rem;
     }
     
@@ -349,6 +349,7 @@ export const StyledCurriculum = styled.div`
 
   overflow: auto;
   height: 330px;
+  //height: 53vh;
   margin-top: 60px;
   width: 70%;
   padding: 20px;
@@ -439,6 +440,8 @@ export const StyledMainContent = styled.div`
 
     .conteudoCentral {
       width: 100%;
+      //margin-bottom: 40px;
+      margin-bottom: 6vw;
     }
   }
 `
@@ -639,7 +642,8 @@ export const StyledCarrousel = styled.div`
 
 export const StyledPanel = styled.div`
   
-  padding: 50px;
+  //padding: 30px 50px;
+  padding: 2.25vw 3.75vw;
   transition: all 0.3s ease-in-out;
   user-select: none;
 
@@ -647,7 +651,8 @@ export const StyledPanel = styled.div`
     overflow: hidden;
     position: relative;
     //height: 500px;
-    height: 85.51vh;
+    //height: 85.51vh;
+    height: 38vw;
   }
 
   .carousel-panel {
@@ -677,6 +682,7 @@ export const StyledPanel = styled.div`
   h2 {
     font-size: 3.4vw;
     cursor: pointer;
+    display: inline-block;
   }
 
   h2:hover {
@@ -715,7 +721,7 @@ export const StyledPanel = styled.div`
 
   .header-project-content {
     height: 4.8vw;
-    padding-top: 30px;
+    padding-top: 0px;
     padding-left: 70px;
   }
 
@@ -723,11 +729,35 @@ export const StyledPanel = styled.div`
     display: flex;
   }
 
+  @media (max-width: 780px) {
+    .trianguloCima, .trianguloBaixo {
+      font-size: 2.1vw;
+      padding: 0px 5px;
+    }
+    
+    .header-project-content {
+      height: 7.7vw;
+      padding-left: 4.5vw;
+    }
+
+    .botoes-triangulo {
+      margin-right: 6px;
+    }
+    
+    h2 {
+      font-size: 5vw;
+    }
+
+    .carrousel-de-paineis {
+      height: 85vw;
+    }
+  }
+
 `
 
 export const StyledMenu = styled.div`
 
-width: 27.5%;
+  width: 27.5%;
   /*border-radius: 15px;
   //background-image: linear-gradient(45deg, #accfdb, #1e9dcc);
   margin: 20px 15px;
@@ -735,7 +765,8 @@ width: 27.5%;
   color: black;
   font-size: 1.25vw;
   height: 29vw;*/
-  margin: 20px 15px;
+  //margin: 20px 15px;
+  margin: 1.5vw 1.125vw;
 
   .main {
     border-radius: 15px;
@@ -828,6 +859,16 @@ width: 27.5%;
     border-bottom-right-radius: 10px;
   }
 
+  @media (max-width: 780px) {
+    margin: auto;
+    width: 88%;
+    margin-top: 20px;
+
+    .main {
+    font-size: 2vw;
+  }
+  }
+
 `
 
 export const StyledCarrouselImages = styled.div`
@@ -836,7 +877,8 @@ export const StyledCarrouselImages = styled.div`
   width: 51.6vw;
   //height: 32vw;
   height: 29vw;
-  margin: 20px 20px;
+  //margin: 20px 20px;
+  margin: 1.5vw;
   border-radius: 15px;
   display: flex;
 
@@ -854,6 +896,16 @@ export const StyledCarrouselImages = styled.div`
     border-radius: 15px;
   }
 
+  @media (max-width: 780px) {
+    margin: auto;
+    width: 81vw;
+    height: 45.5vw;
+  }
+
+  img {
+    width: 81vw;
+  }
+
 `
 
 export const DotsTable = styled.div`
@@ -862,11 +914,11 @@ export const DotsTable = styled.div`
   //margin: auto;
 
   .dot {
+    width: 0.85vw;
+    height: 0.85vw;
+
     //width: 10px;
     //height: 10px;
-
-    width: 10px;
-    height: 10px;
 
     border-radius: 50%;
     background-color: #252525;
@@ -878,12 +930,12 @@ export const DotsTable = styled.div`
     background-color: green !important;
   }
 
-  @media (max-width: 880px) {
+  /*@media (max-width: 880px) {
     .dot {
       width: 8px;
       height: 8px;
     }
-  }
+  }*/
 
 `
 
@@ -1029,7 +1081,8 @@ export const StyledCarrouselPanel = styled.div`
 
   //background-color: purple;
   //height: 500px;
-  margin-bottom: 25px;
+  //margin-bottom: 25px;
+  margin-bottom: 1.875vw;
   //width: 1300px;
   //width: 85%;
   //margin: auto;
@@ -1046,7 +1099,8 @@ export const StyledCarrouselPanel = styled.div`
   }
 
   .dots {
-    font-size: 1.5vw;
+    font-size: 1.6vw;
+    //font-size: 20px;
     font-weight: bolder;
     display: flex;
     width: 100%;
@@ -1070,6 +1124,17 @@ export const StyledCarrouselPanel = styled.div`
 
   .right-change-image {
     margin-left: 6px;
+  }
+
+  @media (max-width: 780px) {
+    .flex {
+      flex-direction: column;
+      //justify-content: center;
+    }
+
+    .project-content-p {
+      font-size: 2vw;
+    }
   }
 
 `

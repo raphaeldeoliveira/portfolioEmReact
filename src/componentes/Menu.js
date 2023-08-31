@@ -9,12 +9,19 @@ export default function Menu(props) {
     const [titleMenu, setTitleMenu] = React.useState(props.titleOptionMenu1)
 
     React.useEffect(() => {
-        setTextMenu(props.functionality);
+        if (titleMenu === "Functionality" || titleMenu === "Funcionamento") {
+            setTitleMenu(props.titleOptionMenu1);
+            setTextMenu(props.functionality);
+        } else if (titleMenu === "Apprenticeship" || titleMenu === "Aprendizado") {
+            setTitleMenu(props.titleOptionMenu3);
+            setTextMenu(props.apprenticeship);
+        }
+        else {
+            setTitleMenu(props.titleOptionMenu2);
+            setTextMenu(props.profitability);
+        }
+        
     }, [props.functionality]);
-
-    React.useEffect(() => {
-        setTitleMenu(props.titleOptionMenu1);
-    }, [props.titleOptionMenu1]);
 
     function menuOption() {
         if (props.numDots === 6) {

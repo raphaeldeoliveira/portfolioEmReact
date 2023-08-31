@@ -17,6 +17,21 @@ function App() {
   const [title, setTitle] = React.useState("FIFA Bot Project")
   const [transicaoTitulo, setTransicaoTitulo] = React.useState(false)
   const [currentProject, setCurrentProject] = React.useState(0)
+  const [mobile, setMobile] = React.useState(false)
+
+  const resizer = () => {
+    setMobile(window.innerWidth <= 780 ? true : false)
+  }
+
+  React.useEffect(() => {
+    resizer()
+    window.addEventListener("resize", resizer)
+
+    // função de limpeza
+    return function() {
+      window.removeEventListener("resize", resizer)
+    }
+  }, [])
 
   function mudarIdioma() {
     setActiveBr((prevState) => !prevState)
@@ -41,13 +56,15 @@ function App() {
           setProjectLink("https://github.com/raphaeldeoliveira/FIFABOT")
         }, 500)
       } else if (currentId == 1) {
-        setTranslateY(-38.25)
+        //setTranslateY(-38.27)
+        setTranslateY(mobile ? -80 : -38.27)
         setTimeout(() => {
           setTitle((activeBr ? idiomaBr.titleProject2 : idiomaEn.titleProject2))
           setProjectLink("https://github.com/raphaeldeoliveira/PlataformaEnsino")
         }, 500)
       } else {
-        setTranslateY(-76.5)
+        //setTranslateY(-76.54)
+        setTranslateY(mobile ? -160 : -76.54)
         setTimeout(() => {
           setTitle((activeBr ? idiomaBr.titleProject3 : idiomaEn.titleProject3))
           setProjectLink("https://github.com/raphaeldeoliveira/LojaRoupaApp")
@@ -71,7 +88,7 @@ function App() {
 
         button1text={(activeBr ? idiomaBr.button1text : idiomaEn.button1text)}
         button2text={(activeBr ? idiomaBr.button2text : idiomaEn.button2text)}
-    />
+      />
       <MainContent
         textBelowImage={(activeBr ? idiomaBr.textBelowImage : idiomaEn.textBelowImage)}
         mainParagraph1={(activeBr ? idiomaBr.mainParagraph1 : idiomaEn.mainParagraph1)}
@@ -145,12 +162,12 @@ function App() {
         setTransicaoTitulo={setTransicaoTitulo}
         currentProject={currentProject}
         setCurrentProject={setCurrentProject}
+        mobile={mobile}
       />
 
       <Footer 
         messageClickMailButton={(activeBr ? idiomaBr.messageClickMailButton : idiomaEn.messageClickMailButton)}
       />
-
     </div>
   );
 }
