@@ -28,7 +28,7 @@ export default function Menu(props) {
             return (
                 <div style={{
                         display: (showMenu ? "block" : "none")
-                    }} className="options">
+                    }} className="options margin-mobile2">
                     <div onClick={() => { 
                         showMenuOption(); 
                         setTextMenu(props.functionality);
@@ -51,7 +51,7 @@ export default function Menu(props) {
             return (
                 <div style={{
                         display: (showMenu ? "block" : "none")
-                    }} className="options">
+                    }} className="options margin-mobile">
                     <div onClick={() => { 
                         showMenuOption(); 
                         setTextMenu(props.functionality);

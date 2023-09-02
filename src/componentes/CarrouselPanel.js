@@ -53,11 +53,13 @@ export default function CarrouselPanel(props) {
         
         if (currentDot === 0) {
             setCurrentDot((props.numDots - 1))
-            setDeslocamento(((props.numDots - 1) * -51.6))
+            //setDeslocamento(((props.numDots - 1) * -51.6))
+            setDeslocamento(((props.numDots - 1) * (props.mobile ? -81 : -51.6)))
         }
         else {
             setCurrentDot((prevDot) => prevDot - 1)
-            setDeslocamento((prevDeslocamento) => prevDeslocamento + 51.6)
+            //setDeslocamento((prevDeslocamento) => prevDeslocamento + 51.6)
+            setDeslocamento((prevDeslocamento) => prevDeslocamento + (props.mobile ? 81 : 51.6))
         }
     }
 
@@ -69,7 +71,7 @@ export default function CarrouselPanel(props) {
         }
         else {
             setCurrentDot((prevDot) => prevDot + 1)
-            setDeslocamento((prevDeslocamento) => prevDeslocamento - 51.6)
+            setDeslocamento((prevDeslocamento) => prevDeslocamento - (props.mobile ? 81 : 51.6))
         }
     }
 
@@ -113,5 +115,6 @@ CarrouselPanel.propTypes = {
     apprenticeship: PropTypes.string.isRequired,
     titleOptionMenu1: PropTypes.string.isRequired,
     titleOptionMenu2: PropTypes.string.isRequired,
-    titleOptionMenu3: PropTypes.string.isRequired
+    titleOptionMenu3: PropTypes.string.isRequired,
+    mobile: PropTypes.bool.isRequired
 }

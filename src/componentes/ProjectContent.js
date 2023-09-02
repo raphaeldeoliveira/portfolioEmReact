@@ -21,7 +21,7 @@ export default function ProjectContent(props) {
         }
         else if (currentId === 1) {
             //props.setTranslateY(-38.25)
-            props.setTranslateY(props.mobile ? -80 : -38.27)
+            props.setTranslateY(props.mobile ? -94.5 : -38.27)
             setTimeout(() => {
                 props.setTitle(props.titleProject2)
                 props.setProjectLink("https://github.com/raphaeldeoliveira/PlataformaEnsino")
@@ -29,7 +29,7 @@ export default function ProjectContent(props) {
         }
         else {
             //props.setTranslateY(-76.5)
-            props.setTranslateY(props.mobile ? -160 : -76.54)
+            props.setTranslateY(props.mobile ? -189 : -76.54)
             setTimeout(() => {
                 props.setTitle(props.titleProject3)
                 props.setProjectLink("https://github.com/raphaeldeoliveira/LojaRoupaApp")
@@ -97,6 +97,7 @@ export default function ProjectContent(props) {
                         titleOptionMenu3={props.titleOptionMenu3}
 
                         id="fifabot"
+                        mobile={props.mobile}
                     />
                     <CarrouselPanel 
                         currentProject= {props.currentProject}
@@ -113,6 +114,7 @@ export default function ProjectContent(props) {
                         titleOptionMenu3={props.titleOptionMenu3}
 
                         id="extension"
+                        mobile={props.mobile}
                     />
                     <CarrouselPanel 
                         currentProject= {props.currentProject}
@@ -129,6 +131,7 @@ export default function ProjectContent(props) {
                         titleOptionMenu3={props.titleOptionMenu3}
 
                         id="angelmodas"
+                        mobile={props.mobile}
                     />
                 </div>
                 

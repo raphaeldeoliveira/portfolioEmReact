@@ -749,7 +749,7 @@ export const StyledPanel = styled.div`
     }
 
     .carrousel-de-paineis {
-      height: 85vw;
+      height: 94vw;
     }
   }
 
@@ -795,7 +795,8 @@ export const StyledMenu = styled.div`
   }
 
   p {
-    padding: 20px;
+    //padding: 20px;
+    padding: 2.7vw;
   }
 
   .bg-gradiente-blue {
@@ -839,10 +840,6 @@ export const StyledMenu = styled.div`
     border-bottom: 1px solid white;
   }
 
-  .option-bottom {
-
-  }
-
   .option-top:hover {
     background-color: green;
     border-top-left-radius: 10px;
@@ -862,12 +859,38 @@ export const StyledMenu = styled.div`
   @media (max-width: 780px) {
     margin: auto;
     width: 88%;
-    margin-top: 20px;
+    //margin-top: 20px;
+    //margin-bottom: 20px;
+    margin-top: 2.6vw;
+    margin-bottom: 2.6vw;
 
     .main {
-    font-size: 2vw;
+      font-size: 2vw;
+    }
+
+    .options {
+      width: 51vw;
+      margin:  auto;
+      font-size: 2vw;
+    } 
+
+    .card-option {
+      padding: 3.35vw 0px;
+    }
+
+    .margin-mobile {
+      margin-bottom: 10.6vw;
+    }
+
+    .margin-mobile2 {
+      margin-bottom: 1.5vw;
+    }
+
   }
-  }
+
+  /*@media (max-width: 550px) {
+    margin-bottom: 2.35vw;
+  }*/
 
 `
 
@@ -930,10 +953,17 @@ export const DotsTable = styled.div`
     background-color: green !important;
   }
 
-  /*@media (max-width: 880px) {
+  @media (max-width: 780px) {
     .dot {
-      width: 8px;
-      height: 8px;
+      width: 1.7vw;
+      height: 1.7vw;
+    }
+  }
+
+  /*@media (max-width: 550px) {
+    .dot {
+      width: 2.2vw;
+      height: 2.2vw;
     }
   }*/
 
@@ -1135,6 +1165,22 @@ export const StyledCarrouselPanel = styled.div`
     .project-content-p {
       font-size: 2vw;
     }
+
+    .dots {
+      font-size: 2.7vw;
+      //margin-top: 20px;
+      margin-top: 2vw;
+      margin-bottom: 1.2vw;
+    }
+
   }
+
+  /*@media (max-width: 550px) {
+    .dots {
+      font-size: 3.7vw;
+      //margin-top: 15px;
+      margin-top: 1.5vw;
+    }
+  }*/
 
 `

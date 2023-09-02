@@ -51,7 +51,8 @@ export default function CarrouselImages(props) {
             return (
                 <div className="carosel-images" 
                 style={{
-                    transform: {currentWidth}
+                    //transform: {currentWidth}
+                    transform: `translateX(${props.deslocamento}vw)`
                 }}>
                     <img src={angelOne} />
                     <img src={angelTwo} />
