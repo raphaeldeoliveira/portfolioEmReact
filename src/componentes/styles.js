@@ -709,7 +709,8 @@ export const StyledPanel = styled.div`
   }
 
   .trianguloCima {
-    margin-bottom: 5px;
+    //margin-bottom: 5px;
+    margin-bottom: 0.3vw;
   }
 
   .botoes-triangulo {
@@ -1023,7 +1024,8 @@ export const StyledFooter = styled.footer`
     font-weight: bold;
     color: white;
     background-color: #333;
-    font-size: 1.3vw;
+    //font-size: 1.3vw;
+    font-size: 18px;
     text-align: center;
     z-index: 0;
     position: absolute;
