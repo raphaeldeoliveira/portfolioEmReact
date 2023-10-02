@@ -311,26 +311,21 @@ export const StyledResume = styled.div`
 
   }
 
-  .sublinhado-js, .sublinhado-vue, .sublinhado-java, .sublinhado-spring {
+  .sublinhado-react, .sublinhado-java, .sublinhado-spring {
     padding: 5px;
     border-radius: 5px;
     font-weight: bold;
   }
 
   @media (max-width: 480px) {
-    .sublinhado-js, .sublinhado-vue, .sublinhado-java, .sublinhado-spring {
+    .sublinhado-react, .sublinhado-java, .sublinhado-spring {
       padding: 3px;
     }
   }
 
-  .sublinhado-js {
-    background-color: #f7df1e;
-    color: #000;
-  }
-
-  .sublinhado-vue {
-    background-color: #012E40;
-    color: #00BD82;
+  .sublinhado-react {
+    background-color: #2e2e2e; /* Cor de fundo do React */
+    color: #61DAFB; /* Cor do texto do React */
   }
 
   .sublinhado-java {

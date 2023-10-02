@@ -40,7 +40,7 @@ export default function MainContent(props) {
                     </p>*/}
                     {<p>
                         {props.mainParagraph1} 
-                        Html, Css, <span className="sublinhado-js">Javascript</span> , <span className="sublinhado-vue">Vue</span> 
+                        Html, Css, Javascript, <span className="sublinhado-react">React</span> 
                         {props.mainParagraph2} 
                         <span className="sublinhado-java">Java</span> 
                         {props.mainParagraph3} 
