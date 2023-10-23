@@ -105,32 +105,74 @@ body {
         margin: 50px;
     }
 
-    & > *:hover {
-        box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.8);
-    }
-
     .icon-js {
         background-color: #F7DF1E;
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease;
+        color: black;
+        width: 100px;
+
+        &:hover {
+            box-shadow: 0px 0px 20px 10px #F7DF1E;
+            cursor: pointer;
+        }
     }
 
     .icon-react {
-        background-color: #61DAFB;
+        background-color: #222222;
+        color: #61DAFB;
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease;
+
+        &:hover {
+            box-shadow: 0px 0px 20px 10px #222222;
+            cursor: pointer;
+        }
     }
     
     .icon-sass {
         background-color: #CC6699;
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease;
+
+        &:hover {
+            box-shadow: 0px 0px 20px 10px #CC6699;
+            cursor: pointer;
+        }
     }
 
     .icon-java {
-        background-color: #007396;
+        background-color: #EA2E2F;
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease;
+
+        &:hover {
+            box-shadow: 0px 0px 20px 10px #EA2E2F;
+            cursor: pointer;
+        }
     }
 
     .icon-spring {
         background-color: #6DB33F;
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease;
+
+        &:hover {
+            box-shadow: 0px 0px 20px 10px #6DB33F;
+            cursor: pointer;
+        }
     }
 
     .icon-postgres {
-        background-color: #4169E1;
+        color: #2F6192;
+        background-color: white;
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease;
+
+        &:hover {
+            box-shadow: 0px 0px 20px 10px white;
+            cursor: pointer;
+        }
     }
 
     
