@@ -1,17 +1,12 @@
 import React from "react"
-import Header from "./componentes/Header"
-import MainContent from "./componentes/MainContent"
-import ProjectsPanel from "./componentes/ProjectsPanel"
-import ProjectContent from "./componentes/ProjectContent"
-import Footer from "./componentes/Footer"
 
 import "./styles.scss"
-import idiomaBr from "./componentes/idiomaBR"
-import idiomaEn from "./componentes/idiomaEN"
+
+import Icons from "./testes/Icons"
 
 function App() {
 
-  const [activeBr, setActiveBr] = React.useState(false)
+  /*const [activeBr, setActiveBr] = React.useState(false)
   const [translateY, setTranslateY] = React.useState(0)
   const [projectLink, setProjectLink] = React.useState("https://github.com/raphaeldeoliveira/FIFABOT")
   const [title, setTitle] = React.useState("FIFA Bot Project")
@@ -78,10 +73,10 @@ function App() {
       }
       setCurrentProject(currentId)
     }, 400);
-  }
+  }*/
   
   return (
-    <div className="App">
+    /*<div className="App">
       <Header
         mudarIdioma={mudarIdioma}
         scrollTo={scrollToButton}
@@ -168,7 +163,9 @@ function App() {
       <Footer 
         messageClickMailButton={(activeBr ? idiomaBr.messageClickMailButton : idiomaEn.messageClickMailButton)}
       />
-    </div>
+    </div>*/
+
+    <Icons />
   );
 }
 

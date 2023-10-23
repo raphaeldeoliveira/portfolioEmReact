@@ -93,3 +93,48 @@ body {
   ::-webkit-scrollbar-thumb:hover {
     background-color: #555;
   }
+
+  .teste-sas {
+
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+    & > * {
+        padding: 15px;
+        border-radius: 15px;
+        margin: 50px;
+    }
+
+    & > *:hover {
+        box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.8);
+    }
+
+    .icon-js {
+        background-color: #F7DF1E;
+    }
+
+    .icon-react {
+        background-color: #61DAFB;
+    }
+    
+    .icon-sass {
+        background-color: #CC6699;
+    }
+
+    .icon-java {
+        background-color: #007396;
+    }
+
+    .icon-spring {
+        background-color: #6DB33F;
+    }
+
+    .icon-postgres {
+        background-color: #4169E1;
+    }
+
+    
+
+
+
+  }
