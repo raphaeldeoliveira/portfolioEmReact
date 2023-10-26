@@ -1,8 +1,15 @@
 import React from "react"
+import idiomaBr from "./componentes/idiomaBR"
+import idiomaEn from "./componentes/idiomaEN"
+import Header from "./componentes/Header"
+import MainContent from "./componentes/MainContent"
+import ProjectsPanel from "./componentes/ProjectsPanel"
+import ProjectContent from "./componentes/ProjectContent"
+import Footer from "./componentes/Footer"
 
 import "./styles.scss"
 
-import Icons from "./testes/Icons"
+/*import Icons from "./testes/Icons"*/
 
 function App() {
 
