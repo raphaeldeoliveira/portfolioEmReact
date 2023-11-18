@@ -23,10 +23,17 @@ export default function MainContent(props) {
 
     return (
         <StyledMainContent>
+            
             <StyledPhotoProfile>
-                <img src={activeResume ? PhotoStuding : PhotoDefault} />
+                <div>
+                    <div className={`imagem-rotatoria ${activeResume ? "active-rotate" : ""}`}>
+                        <img className="cara" src={PhotoDefault} />
+                        <img className="coroa" src={PhotoStuding} />
+                    </div>
+                </div>
                 <span>{props.textBelowImage}</span>
             </StyledPhotoProfile>
+            
             <div className="conteudoCentral">
                 <StyledResume
                     style={{

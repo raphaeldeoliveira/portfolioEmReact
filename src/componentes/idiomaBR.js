@@ -4,7 +4,7 @@ export default {
 
     textBelowImage: "Esse sou eu!",
 
-    mainParagraph1: "Sou um estudante de ciência da computação no Instituto Federal de Santa Catarina. Focado em me tornar um desenvolvedor fullstack. Minhas principais habilidades são:",
+    mainParagraph1: "Sou um estudante de ciência da computação no Instituto Federal de Santa Catarina. Focado em me tornar um desenvolvedor fullstack. Minhas principais habilidades são: ",
     mainParagraph2: " e ",
     mainParagraph3: " com ",
     mainParagraph4: " Mas estudando para me tornar um grande programador.",

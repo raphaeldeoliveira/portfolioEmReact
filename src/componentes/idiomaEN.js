@@ -4,7 +4,7 @@ export default {
 
     textBelowImage: "That's Me!",
 
-    mainParagraph1: "I'm a student of computer cience on Instituto Federal de Santa Catarina. Focused on becoming a fullstack developer. My actual skills is:",
+    mainParagraph1: "I'm a student of computer cience on Instituto Federal de Santa Catarina. Focused on becoming a fullstack developer. My actual skills is: ",
     mainParagraph2: " and ",
     mainParagraph3: " whit ",
     mainParagraph4: " But studying to become a great programmer. I have so much interesse in tech and search upgrade my skills day by day.",

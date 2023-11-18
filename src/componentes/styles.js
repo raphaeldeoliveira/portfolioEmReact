@@ -200,23 +200,47 @@ export const StyledPhotoProfile = styled.div`
   justify-content: center;
   flex-direction: column;
 
-  img {
-    user-select: none;
+  div {
     width: 400px;
+    height: 400px;
+    position: relative;
     margin: auto;
-    margin-top: 45px;
-    border: 10px solid white;
-    border-radius: 50%;
+  }
+
+  div > .imagem-rotatoria {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease-in-out;
+
+    img {
+      user-select: none;
+      width: 400px;
+      margin-top: 45px;
+      border: 10px solid white;
+      border-radius: 50%;
+      position: absolute;
+      backface-visibility: hidden;
+    }
+
+    .coroa {
+      transform: rotateY(180deg);
+    }
+
+    &.active-rotate {
+      transform: rotateY(180deg) translateX(-20px);
+    }
+
   }
 
   span {
     user-select: none;
-    margin-top: 20px;
     margin-bottom: 35px;
     font-weight: bold;
     text-align: center;
     display: block;
     font-size: 2.3rem;
+    margin-top: 85px;
+    margin-left: 20px;
   }
   
   @media (max-width: 1150px) {
@@ -254,7 +278,10 @@ export const StyledPhotoProfile = styled.div`
 export const StyledResume = styled.div`
 
   width: 80%;
+  height: 307px;
+  padding: 0px 20px;
   margin-top: 60px;
+  margin-bottom: 40px;
 
   h1 {
     font-size: 4.5rem;
@@ -343,7 +370,7 @@ export const StyledResume = styled.div`
 export const StyledCurriculum = styled.div`
 
   overflow: auto;
-  height: 330px;
+  height: 307px;
   //height: 53vh;
   margin-top: 60px;
   width: 70%;
