@@ -18,7 +18,7 @@ export default function MainContent(props) {
         setMarginAnimation((prevMargin) => !prevMargin)
         setTimeout(() => {
             setActiveResume((prevState) => !prevState)
-        }, 1000);
+        }, 800);
     }
 
     return (
@@ -42,9 +42,6 @@ export default function MainContent(props) {
                 >
                     <h1>RAPHAEL</h1>
                     <h1 className="sobrenome">CARVALHO</h1>
-                    {/*<p>
-                    I&#39;m a student of computer cience on Instituto Federal de Santa Catarina. Focused on becoming a fullstack developer. My actual skills is: Html, Css, <span className="sublinhado-js">Javascript</span> , <span className="sublinhado-vue">Vue</span> and <span className="sublinhado-java">Java</span> whit <span className="sublinhado-spring">Spring Boot</span>. But studying to become a great programmer. I have so much interesse in tech and search upgrade my skills day by day.
-                    </p>*/}
                     {<p>
                         {props.mainParagraph1} 
                         Html, Css, Javascript, <span className="sublinhado-react">React</span> 

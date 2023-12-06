@@ -42,13 +42,45 @@ function App() {
   function scrollToButton(destino) {
     const elemento = document.getElementById(destino)
     if (elemento) {
-      elemento.scrollIntoView({ behavior: 'smooth' })
+        elemento.scrollIntoView({ behavior: 'smooth' })
+        if (destino === "socialMedias") {
+          const emailclass = document.getElementsByClassName('button-email')
+          const email = emailclass[0];
+          const demaisMidias = document.getElementsByClassName('social-midia-button')
+          const linkedin = demaisMidias[0];
+          const zap = demaisMidias[1];
+          const github = demaisMidias[2];
+          setTimeout(() => {
+              email.classList.add('social-midia-button-green');
+              linkedin.classList.add('social-midia-button-green');
+              zap.classList.add('social-midia-button-green');
+              github.classList.add('social-midia-button-green');
+              setTimeout(() => {
+                email.classList.remove('social-midia-button-green');
+                linkedin.classList.remove('social-midia-button-green');
+                zap.classList.remove('social-midia-button-green');
+                github.classList.remove('social-midia-button-green');
+              }, 200)
+              setTimeout(() => {
+                email.classList.add('social-midia-button-green');
+                linkedin.classList.add('social-midia-button-green');
+                zap.classList.add('social-midia-button-green');
+                github.classList.add('social-midia-button-green');
+              }, 400)
+              setTimeout(() => {
+                email.classList.remove('social-midia-button-green');
+                linkedin.classList.remove('social-midia-button-green');
+                zap.classList.remove('social-midia-button-green');
+                github.classList.remove('social-midia-button-green');
+              }, 600)
+          }, 1000)
+        }
     }
   }
 
   function scrollToProject(currentId) {
     
-    document.getElementById("section-projects").scrollIntoView({ behavior: 'smooth' })
+    document.getElementById("correct-position-behavior").scrollIntoView({ behavior: 'smooth' })
 
     setTimeout(() => {
       if (currentId == 0) {

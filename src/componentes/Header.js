@@ -7,18 +7,15 @@ import PropTypes from "prop-types"
 export default function Header(props) {
 
     const [nomeSobrenome, setNomeSobrenome] = React.useState(true);
-    //const [larguraTela, setlarguraTela] = React.useState(window.innerWidth)
 
     const resizer = () => {
         setNomeSobrenome(window.innerWidth <= 760 ? false : true)
-        //setlarguraTela(window.innerWidth)
     }
 
     React.useEffect(() => {
         resizer()
         window.addEventListener("resize", resizer)
 
-        // função de limpeza
         return function() {
             window.removeEventListener("resize", resizer)
         }

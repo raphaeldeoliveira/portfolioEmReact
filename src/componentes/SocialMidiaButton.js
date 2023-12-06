@@ -5,7 +5,7 @@ import PropTypes from "prop-types"
 export default function SocialMidiaButton(props) {
 
     return (
-        <ButtonSocialMidia href={props.link} target="_blank">
+        <ButtonSocialMidia className="social-midia-button" href={props.link} target="_blank">
             <img src={props.image}/>
         </ButtonSocialMidia>
     )

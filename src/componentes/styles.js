@@ -202,6 +202,7 @@ export const StyledPhotoProfile = styled.div`
 
   div {
     width: 400px;
+    //width: 100%;
     height: 400px;
     position: relative;
     margin: auto;
@@ -211,10 +212,13 @@ export const StyledPhotoProfile = styled.div`
     position: relative;
     transform-style: preserve-3d;
     transition: transform 0.4s ease-in-out;
-
+    display: flex;
+    justify-content: space-around;
+    
     img {
       user-select: none;
       width: 400px;
+      //width: 70%;
       margin-top: 45px;
       border: 10px solid white;
       border-radius: 50%;
@@ -665,9 +669,13 @@ export const StyledCarrousel = styled.div`
 export const StyledPanel = styled.div`
   
   //padding: 30px 50px;
-  padding: 2.25vw 3.75vw;
+  padding: 2vw 3.75vw;
   transition: all 0.3s ease-in-out;
   user-select: none;
+
+  #correct-position-behavior {
+        margin-bottom: 16px;
+    }
 
   .carrousel-de-paineis {
     overflow: hidden;
@@ -819,7 +827,7 @@ export const StyledMenu = styled.div`
 
   p {
     //padding: 20px;
-    padding: 2.7vw;
+    padding: 2vw;
   }
 
   .bg-gradiente-blue {
@@ -1027,6 +1035,11 @@ export const StyledFooter = styled.footer`
 
   .flex {
     display: flex;
+
+    .social-midia-button-green {
+      background-color: green;
+      border-radius: 10px;
+    }
   }
 
   .button-email {
@@ -1105,7 +1118,6 @@ export const ButtonSocialMidia = styled.a`
   width: 70px;
   height: 70px;
   margin-left: 15px;
-
   display: block;
   text-decoration: none;
   border-radius: 10px;

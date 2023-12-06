@@ -62,6 +62,7 @@ export default function ProjectContent(props) {
 
     return (
         <StyledPanel>
+            <div id="correct-position-behavior"></div>
             <div id="section-projects" className="header-project-content">
                 <div className="botoes-triangulo">
                     <button onClick={changeTop} className="trianguloCima">▲</button>
