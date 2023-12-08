@@ -18,7 +18,7 @@ export default function CardLeetCode(props) {
                 </StyledCardLeetCode>
             ) : 
             (
-                <StyledCardMobileLeetCode>
+                <StyledCardMobileLeetCode href={props.link} target="_blank">
                     <img src={props.image}/>
                     <div className="seccao-textos">
                         <h4>{props.title}</h4>
