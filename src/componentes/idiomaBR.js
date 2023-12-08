@@ -36,7 +36,7 @@ export default {
     titleProject1: "Projeto do FIFA BOT",
     cardParagrap1: "Este projeto está dividido em três subprojetos: a criação do site de vendas, o desenvolvimento de um produto (uma extensão para navegador) e a implementação de uma API REST em Docker para a criação de usuários no site.",
 
-    titleProject2: "Plataforma de ensino de programação",
+    titleProject2: "Plataforma de ensino",
     cardParagrap2: "Esse é um projeto de extensão da universidade que eu fui um desenvolvedor front-end. Construi todos os componentes css e as interatividades com o vue.",
 
     titleProject3: "Angel Modas",

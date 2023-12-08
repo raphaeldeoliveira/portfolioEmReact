@@ -152,6 +152,7 @@ function App() {
       <ProjectsPanel
         scrollTo={scrollToProject}
         setTranslateY={setTranslateY}
+        mobile={mobile}
         titleProject1={(activeBr ? idiomaBr.titleProject1 : idiomaEn.titleProject1)}
         cardParagrap1={(activeBr ? idiomaBr.cardParagrap1 : idiomaEn.cardParagrap1)}
         titleProject2={(activeBr ? idiomaBr.titleProject2 : idiomaEn.titleProject2)}

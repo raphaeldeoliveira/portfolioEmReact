@@ -22,7 +22,8 @@ export default function ProjectsPanel(props) {
 
     return (
         <StyledGrid id="cardProjects">
-            <Card 
+            <Card
+                mobile={props.mobile}
                 title={props.titleProject1}
                 description={props.cardParagrap1}
                 primeiraImagem={photoFifaOne}
@@ -32,7 +33,8 @@ export default function ProjectsPanel(props) {
                 projectName="fifabot"
                 currentId={0}
             />
-            <Card 
+            <Card
+                mobile={props.mobile}
                 title={props.titleProject2}
                 description={props.cardParagrap2}
                 primeiraImagem={photoProExtOne}
@@ -42,7 +44,8 @@ export default function ProjectsPanel(props) {
                 projectName="extension"
                 currentId={1}
             />
-            <Card 
+            <Card
+                mobile={props.mobile}
                 title={props.titleProject3}
                 description={props.cardParagrap3}
                 primeiraImagem={photoAngelModasOne}
@@ -53,17 +56,18 @@ export default function ProjectsPanel(props) {
                 currentId={2}
             />
             <CardLeetCode
+                mobile={props.mobile}
                 title={props.titleProject4}
                 description={props.cardParagrap4}
                 image={photoLeetcode}
                 link="https://leetcode.com/raphaeloc/"
-                
             />
         </StyledGrid>
     )
 }
 
 ProjectsPanel.propTypes = {
+    mobile: PropTypes.func.isRequired,
     scrollTo: PropTypes.func.isRequired,
     titleProject1: PropTypes.string.isRequired,
     cardParagrap1: PropTypes.string.isRequired,

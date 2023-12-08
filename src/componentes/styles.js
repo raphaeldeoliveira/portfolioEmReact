@@ -558,6 +558,32 @@ export const StyledCard = styled.div`
  
 `
 
+export const StyledCardMobile = styled.div`
+  background-color: #252525;
+  cursor: pointer;
+  border-radius: 15px;
+  margin-top: 1.5vw;
+  margin-bottom: 1.5vw;
+  user-select: none;
+  width: 84%;
+  padding: 20px;
+
+  transition: all 0.3s ease-in-out;
+
+  h4 {
+    font-size: 7.4vw;
+    font-weight: bold;
+    padding: 4vw 0px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 5.22vw;
+    padding: 0px 20px;
+    padding-bottom: 3vw;
+  }
+`
+
 export const StyledGrid = styled.div`
 
   width: 93vw;
@@ -594,6 +620,30 @@ export const StyledCardLeetCode = styled(StyledCard).attrs({ as: 'a' })`
       width: 28vw;
       height: 28vw;
       margin: 3vw;
+    }
+  }
+
+`
+
+export const StyledCardMobileLeetCode = styled(StyledCardMobile).attrs({ as: 'a' })`
+  background-color: white;
+  color: black;
+  text-decoration: none;
+
+  img {
+    width: 14.84vw;
+    height: 14.84vw;
+    margin: 20px;
+  }
+
+  @media (max-width: 780px) {
+    img {
+      //width: 28vw;
+      //height: 28vw;
+      width: 72vw;
+      height: 72vw;
+      margin: 3vw;
+      padding: 20px;
     }
   }
 
@@ -650,15 +700,21 @@ export const StyledCarrousel = styled.div`
   }
 
   @media (max-width: 780px) {
-    width: 28vw;
-    height: 28vw;
+    //width: 28vw;
+    //height: 28vw;
+    width: 72vw;
+    height: 72vw;
     margin: 3vw;
 
     span {
-      font-size: 4.7vw;
-      height: 28vw;
-      width: 5.66vw;
-      line-height: 28vw;
+      //font-size: 4.7vw;
+      font-size: 12.08vw;
+      //height: 28vw;
+      height: 72vw;
+      //width: 5.66vw;
+      width: 14.55vw;
+      //line-height: 28vw;
+      line-height: 72vw;
     }
 
   }
@@ -1037,7 +1093,7 @@ export const StyledFooter = styled.footer`
     display: flex;
 
     .social-midia-button-green {
-      background-color: green;
+      background-color: #000800;
       border-radius: 10px;
     }
   }
