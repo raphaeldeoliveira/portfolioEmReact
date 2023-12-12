@@ -11,6 +11,19 @@ export default function MainContent(props) {
     const [activeResume, setActiveResume] = React.useState(false)
     const [marginAnimation, setMarginAnimation] = React.useState(false)
 
+    const [firstMarginTop, setFirstMarginTop] = React.useState("40px")
+    const [secondMarginTop, setSecondMarginTop] = React.useState("20px")
+
+    React.useEffect(() => {
+        if (props.mobile) {
+            setFirstMarginTop('40px');
+            setSecondMarginTop('20px');
+        } else {
+            setFirstMarginTop('40px');
+            setSecondMarginTop('20px');
+        }
+    }, [props.mobile])
+
     function inverterState() {
         setTimeout(() => {
             setMarginAnimation((prevMargin) => !prevMargin)
@@ -96,13 +109,14 @@ export default function MainContent(props) {
 
                 </StyledCurriculum>
 
-                <StyledResumeButton style={{ marginTop: (marginAnimation ? "40px" : "20px")}} onClick={inverterState}>{`${activeResume ? props.buttonText2 : props.buttonText1}`}</StyledResumeButton>
+                <StyledResumeButton style={{ marginTop: (marginAnimation ? firstMarginTop : secondMarginTop)}} onClick={inverterState}>{`${activeResume ? props.buttonText2 : props.buttonText1}`}</StyledResumeButton>
             </div>
         </StyledMainContent>
     )
 }
 
 MainContent.propTypes = {
+    mobile: PropTypes.func.isRequired,
     textBelowImage: PropTypes.string.isRequired,
     mainParagraph1: PropTypes.string.isRequired,
     mainParagraph2: PropTypes.string.isRequired,

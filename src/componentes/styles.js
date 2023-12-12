@@ -266,15 +266,35 @@ export const StyledPhotoProfile = styled.div`
   @media (max-width: 780px) {
     width: 100%;
 
+    div {
+    width: 100vw;
+    height: 85vw;
+    position: relative;
+    margin: auto;
+  }
+
     img {
       width: 70% !important;
     }
 
     span {
-      margin-top: 12px;
-      font-size: 8vw;
+      margin: 0px;
+      margin-top: 1.5vw;
+      font-size: 11vw;
     }
 
+  }
+
+  @media (max-width: 520px) {
+    span {
+      margin-top: 3vw;
+    }
+  }
+
+  @media (max-width: 420px) {
+    span {
+      margin-top: 6vw;
+    }
   }
 
 `
@@ -326,6 +346,8 @@ export const StyledResume = styled.div`
 
   @media (max-width: 780px) {
     
+    height: auto;
+
     margin-top: 15px;
 
     h1 {
@@ -334,9 +356,8 @@ export const StyledResume = styled.div`
     }
 
     p {
-      margin-top: 11.25px;
-      font-size: 3vw;
-      line-height: 4.8vw;
+      font-size: 4.5vw;
+      line-height: 6.5vw;
     }
 
 
@@ -428,18 +449,23 @@ export const StyledCurriculum = styled.div`
     padding-bottom: 10px;
   }
 
-  @media (max-width: 700px) {
-    height: 300px;
-    margin-top: 0px;
+  @media (max-width: 780px) {
+    margin-top: 5vw;
+    height: 74vw;
   }
+
+  /*@media (max-width: 700px) {
+    //height: 300px;
+    margin-top: 0px;
+  }*/
 
   @media (max-width: 600px) {
     font-size: 2.7vw;
   }
 
-  @media (max-width: 450px) {
+  /*@media (max-width: 450px) {
     margin-top: -25px;
-  }
+  }*/
 
 `
 
@@ -487,11 +513,11 @@ export const StyledResumeButton = styled(StyledButton)`
   }
 
   @media (max-width: 780px) {
-    font-size: 3vw;
-  }
-
-  @media (max-width: 500px) {
-    font-size: 4vw;
+    //margin-top: -20px !important;
+    font-size: 4.5vw;
+    box-shadow: 1.5vw 1.5vw rgb(210, 210, 210);
+    border-radius: 2vw;
+    padding: 3vw;
   }
 
 `
@@ -821,6 +847,10 @@ export const StyledPanel = styled.div`
       //font-size: 2.1vw;
       font-size: 6vw;
       padding: 0px 5px;
+    }
+
+    .trianguloCima {
+      margin-bottom: -0.5vw;
     }
     
     .header-project-content {
@@ -1278,7 +1308,7 @@ export const StyledCarrouselPanel = styled.div`
     .project-content-p {
       //font-size: 2vw;
       font-size: 3.5vw;
-      padding-top: 1.5vw;
+      padding: 2.5vw 0px;
     }
 
     .dots {

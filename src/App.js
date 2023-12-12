@@ -28,7 +28,7 @@ function App() {
   React.useEffect(() => {
     //window.innerWidth <= 780 ? setMobile(true) : setMobile(false)
     resizer()
-}, [window.innerWidth]);
+  }, [window.innerWidth]);
 
   React.useEffect(() => {
     resizer()
@@ -129,6 +129,7 @@ function App() {
         button2text={(activeBr ? idiomaBr.button2text : idiomaEn.button2text)}
       />
       <MainContent
+        mobile={mobile}
         textBelowImage={(activeBr ? idiomaBr.textBelowImage : idiomaEn.textBelowImage)}
         mainParagraph1={(activeBr ? idiomaBr.mainParagraph1 : idiomaEn.mainParagraph1)}
         mainParagraph2={(activeBr ? idiomaBr.mainParagraph2 : idiomaEn.mainParagraph2)}
