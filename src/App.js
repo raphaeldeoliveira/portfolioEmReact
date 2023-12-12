@@ -26,6 +26,11 @@ function App() {
   }
 
   React.useEffect(() => {
+    //window.innerWidth <= 780 ? setMobile(true) : setMobile(false)
+    resizer()
+}, [window.innerWidth]);
+
+  React.useEffect(() => {
     resizer()
     window.addEventListener("resize", resizer)
 
@@ -91,14 +96,14 @@ function App() {
         }, 500)
       } else if (currentId == 1) {
         //setTranslateY(-38.27)
-        setTranslateY(mobile ? -94.5 : -38.27)
+        setTranslateY(mobile ? -106 : -38.27)
         setTimeout(() => {
           setTitle((activeBr ? idiomaBr.titleProject2 : idiomaEn.titleProject2))
           setProjectLink("https://github.com/raphaeldeoliveira/PlataformaEnsino")
         }, 500)
       } else {
         //setTranslateY(-76.54)
-        setTranslateY(mobile ? -189 : -76.54)
+        setTranslateY(mobile ? -212 : -76.54)
         setTimeout(() => {
           setTitle((activeBr ? idiomaBr.titleProject3 : idiomaEn.titleProject3))
           setProjectLink("https://github.com/raphaeldeoliveira/LojaRoupaApp")

@@ -34,13 +34,6 @@ body {
     }
 }
 
-@media (max-width: 780px) {
-    *:focus {
-        outline: none;
-    }
-  
-}
-
 @media (max-width: 360px) {
     
     @keyframes esq-dir {

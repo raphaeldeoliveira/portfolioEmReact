@@ -43,17 +43,6 @@ import PropTypes from "prop-types"
 
 export default function CarrouselImages(props) {
 
-    const [mobileActive, setMobileActive] = React.useState(false)
-
-    React.useEffect(() => {
-        currentWidth()
-        window.innerWidth < 680 ? setMobileActive(true) : setMobileActive(false)
-    }, [window.innerWidth]);
-
-    function currentWidth() {
-        return `translateX(${props.deslocamento}vw)`
-    }
-
     function images() {
         if (props.numDots === 6) {
             return (
@@ -61,12 +50,12 @@ export default function CarrouselImages(props) {
                 style={{
                     transform: `translateX(${props.deslocamento}vw)`
                 }}>
-                    <img src={mobileActive ? mobileFifaOne : fifaOne} />
-                    <img src={mobileActive ? mobileFifaTwo : fifaTwo} />
-                    <img src={mobileActive ? mobileFifaThree : fifaThree} />
-                    <img src={mobileActive ? mobileFifaFour : fifaFour} />
-                    <img src={mobileActive ? mobileFifaFive : fifaFive} />
-                    <img src={mobileActive ? mobileFifaSix : fifaSix} />
+                    <img src={props.mobile ? mobileFifaOne : fifaOne} />
+                    <img src={props.mobile ? mobileFifaTwo : fifaTwo} />
+                    <img src={props.mobile ? mobileFifaThree : fifaThree} />
+                    <img src={props.mobile ? mobileFifaFour : fifaFour} />
+                    <img src={props.mobile ? mobileFifaFive : fifaFive} />
+                    <img src={props.mobile ? mobileFifaSix : fifaSix} />
                 </div>
             )
         }
@@ -77,11 +66,11 @@ export default function CarrouselImages(props) {
                     //transform: {currentWidth}
                     transform: `translateX(${props.deslocamento}vw)`
                 }}>
-                    <img src={mobileActive ? mobileAngelOne : angelOne} />
-                    <img src={mobileActive ? mobileAngelTwo : angelTwo} />
-                    <img src={mobileActive ? mobileAngelThree : angelThree} />
-                    <img src={mobileActive ? mobileAngelFour : angelFour} />
-                    <img src={mobileActive ? mobileAngelFive : angelFive} />
+                    <img src={props.mobile ? mobileAngelOne : angelOne} />
+                    <img src={props.mobile ? mobileAngelTwo : angelTwo} />
+                    <img src={props.mobile ? mobileAngelThree : angelThree} />
+                    <img src={props.mobile ? mobileAngelFour : angelFour} />
+                    <img src={props.mobile ? mobileAngelFive : angelFive} />
                 </div>
             )
         }
@@ -91,10 +80,10 @@ export default function CarrouselImages(props) {
                 style={{
                     transform: `translateX(${props.deslocamento}vw)`
                 }}>
-                    <img src={mobileActive ? mobileExtensaoOne : extensaoOne} />
-                    <img src={mobileActive ? mobileExtensaoTwo : extensaoTwo} />
-                    <img src={mobileActive ? mobileExtensaoThree : extensaoThree} />
-                    <img src={mobileActive ? mobileExtensaoFour : extensaoFour} />
+                    <img src={props.mobile ? mobileExtensaoOne : extensaoOne} />
+                    <img src={props.mobile ? mobileExtensaoTwo : extensaoTwo} />
+                    <img src={props.mobile ? mobileExtensaoThree : extensaoThree} />
+                    <img src={props.mobile ? mobileExtensaoFour : extensaoFour} />
                 </div>
             )
         }
@@ -108,6 +97,7 @@ export default function CarrouselImages(props) {
 }
 
 CarrouselImages.propTypes = {
+    mobile: PropTypes.func.isRequired,
     numDots: PropTypes.number.isRequired,
     deslocamento: PropTypes.number.isRequired,
 }

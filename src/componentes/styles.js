@@ -818,13 +818,18 @@ export const StyledPanel = styled.div`
 
   @media (max-width: 780px) {
     .trianguloCima, .trianguloBaixo {
-      font-size: 2.1vw;
+      //font-size: 2.1vw;
+      font-size: 6vw;
       padding: 0px 5px;
     }
     
     .header-project-content {
-      height: 7.7vw;
+      //height: 7.7vw;
+      height: 17vw;
       padding-left: 4.5vw;
+      display: flex;
+      align-items: center;
+      margin: auto;
     }
 
     .botoes-triangulo {
@@ -832,11 +837,13 @@ export const StyledPanel = styled.div`
     }
     
     h2 {
-      font-size: 5vw;
+      font-size: 8vw;
     }
 
     .carrousel-de-paineis {
-      height: 94vw;
+      //height: 94vw;
+      //height: 106vw;
+      height: 200vw;
     }
   }
 
@@ -951,22 +958,35 @@ export const StyledMenu = styled.div`
     margin-top: 2.6vw;
     margin-bottom: 2.6vw;
 
+    .switch-menu-text {
+      font-size: 3.5vw;
+    }
+
     .main {
-      font-size: 2vw;
+      //font-size: 2vw;
+      font-size: 3vw;
+      height: 45vw;
+    }
+
+    p {
+      padding: 4vw;
     }
 
     .options {
-      width: 51vw;
+      //width: 51vw;
+      width: 81vw;
       margin:  auto;
-      font-size: 2vw;
+      //font-size: 2vw;
+      font-size: 3.5vw;
     } 
 
     .card-option {
-      padding: 3.35vw 0px;
+      //padding: 3.35vw 0px;
+      padding: 5.1vw 0px;
     }
 
     .margin-mobile {
-      margin-bottom: 10.6vw;
+      margin-bottom: 16vw;
     }
 
     .margin-mobile2 {
@@ -1009,7 +1029,11 @@ export const StyledCarrouselImages = styled.div`
   @media (max-width: 780px) {
     margin: auto;
     width: 81vw;
-    height: 45.5vw;
+    height: 100vw;
+
+    .carosel-images {
+      width: 3800px;
+    }
   }
 
   img {
@@ -1255,7 +1279,8 @@ export const StyledCarrouselPanel = styled.div`
     }
 
     .project-content-p {
-      font-size: 2vw;
+      //font-size: 2vw;
+      font-size: 3.5vw;
     }
 
     .dots {

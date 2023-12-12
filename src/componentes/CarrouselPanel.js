@@ -90,7 +90,8 @@ export default function CarrouselPanel(props) {
                     titleOptionMenu3={props.titleOptionMenu3}
                 />
                 <div>
-                    <CarrouselImages 
+                    <CarrouselImages
+                        mobile={props.mobile}
                         deslocamento = {deslocamento}
                         numDots= {props.numDots}
                     />
