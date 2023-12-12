@@ -830,6 +830,7 @@ export const StyledPanel = styled.div`
       display: flex;
       align-items: center;
       margin: auto;
+      padding-bottom: 1.5vw;
     }
 
     .botoes-triangulo {
@@ -843,7 +844,7 @@ export const StyledPanel = styled.div`
     .carrousel-de-paineis {
       //height: 94vw;
       //height: 106vw;
-      height: 200vw;
+      height: 188vw;
     }
   }
 
@@ -956,7 +957,8 @@ export const StyledMenu = styled.div`
     //margin-top: 20px;
     //margin-bottom: 20px;
     margin-top: 2.6vw;
-    margin-bottom: 2.6vw;
+    //margin-bottom: 2.6vw;
+    margin-bottom: 6vw;
 
     .switch-menu-text {
       font-size: 3.5vw;
@@ -1066,17 +1068,12 @@ export const DotsTable = styled.div`
 
   @media (max-width: 780px) {
     .dot {
-      width: 1.7vw;
-      height: 1.7vw;
+      //width: 1.7vw;
+      //height: 1.7vw;
+      width: 4vw;
+      height: 4vw;
     }
   }
-
-  /*@media (max-width: 550px) {
-    .dot {
-      width: 2.2vw;
-      height: 2.2vw;
-    }
-  }*/
 
 `
 
@@ -1281,23 +1278,17 @@ export const StyledCarrouselPanel = styled.div`
     .project-content-p {
       //font-size: 2vw;
       font-size: 3.5vw;
+      padding-top: 1.5vw;
     }
 
     .dots {
-      font-size: 2.7vw;
+      //font-size: 2.7vw;
+      font-size: 8vw;
       //margin-top: 20px;
       margin-top: 2vw;
       margin-bottom: 1.2vw;
     }
 
   }
-
-  /*@media (max-width: 550px) {
-    .dots {
-      font-size: 3.7vw;
-      //margin-top: 15px;
-      margin-top: 1.5vw;
-    }
-  }*/
 
 `
