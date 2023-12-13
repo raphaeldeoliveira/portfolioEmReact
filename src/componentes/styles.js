@@ -588,25 +588,27 @@ export const StyledCardMobile = styled.div`
   background-color: #252525;
   cursor: pointer;
   border-radius: 15px;
-  margin-top: 1.5vw;
-  margin-bottom: 1.5vw;
+  margin: 1.5vw 0px;
   user-select: none;
-  width: 84%;
-  padding: 20px;
+  width: 85%;
+  //padding: 30px;
 
   transition: all 0.3s ease-in-out;
 
   h4 {
     font-size: 7.4vw;
     font-weight: bold;
-    padding: 4vw 0px;
+    padding: 4.5vw 0px;
     text-align: center;
+    width: 100%;
   }
 
   p {
     font-size: 5.22vw;
     padding: 0px 20px;
-    padding-bottom: 3vw;
+    padding-bottom: 6vw;
+    width: 75%;
+    margin: auto;
   }
 `
 
@@ -626,6 +628,7 @@ export const StyledGrid = styled.div`
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 1fr);
     gap: 3vw;
+    width: 100%;
   }
 
 `
@@ -728,15 +731,19 @@ export const StyledCarrousel = styled.div`
   @media (max-width: 780px) {
     //width: 28vw;
     //height: 28vw;
-    width: 72vw;
-    height: 72vw;
-    margin: 3vw;
+    //width: 72vw;
+    //height: 72vw;
+    width: 80%;
+    height: 68vw;
+    //margin: 3vw;
+    margin: auto;
+    margin-top: 8vw;
 
     span {
       //font-size: 4.7vw;
       font-size: 12.08vw;
       //height: 28vw;
-      height: 72vw;
+      height: 68vw;
       //width: 5.66vw;
       width: 14.55vw;
       //line-height: 28vw;
