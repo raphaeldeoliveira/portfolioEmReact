@@ -16,11 +16,11 @@ export default function MainContent(props) {
 
     React.useEffect(() => {
         if (props.mobile) {
-            setFirstMarginTop('40px');
-            setSecondMarginTop('20px');
+            setFirstMarginTop('9vw');
+            setSecondMarginTop('6vw');
         } else {
-            setFirstMarginTop('40px');
-            setSecondMarginTop('20px');
+            setFirstMarginTop('5.12vw');
+            setSecondMarginTop('2.56vw');
         }
     }, [props.mobile])
 

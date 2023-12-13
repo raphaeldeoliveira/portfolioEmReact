@@ -349,6 +349,7 @@ export const StyledResume = styled.div`
     height: auto;
 
     margin-top: 15px;
+    margin-bottom: 0px;
 
     h1 {
       font-size: 12vw;
@@ -452,6 +453,9 @@ export const StyledCurriculum = styled.div`
   @media (max-width: 780px) {
     margin-top: 5vw;
     height: 74vw;
+    //line-height: 1.3;
+    font-size: 3.5vw;
+
   }
 
   /*@media (max-width: 700px) {
@@ -459,9 +463,9 @@ export const StyledCurriculum = styled.div`
     margin-top: 0px;
   }*/
 
-  @media (max-width: 600px) {
+  /*@media (max-width: 600px) {
     font-size: 2.7vw;
-  }
+  }*/
 
   /*@media (max-width: 450px) {
     margin-top: -25px;
@@ -627,7 +631,7 @@ export const StyledGrid = styled.div`
   @media (max-width: 780px) {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 1fr);
-    gap: 3vw;
+    gap: 6vw;
     width: 100%;
   }
 
@@ -881,7 +885,7 @@ export const StyledPanel = styled.div`
     .carrousel-de-paineis {
       //height: 94vw;
       //height: 106vw;
-      height: 188vw;
+      height: 192vw;
     }
   }
 
