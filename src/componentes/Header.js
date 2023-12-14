@@ -9,7 +9,7 @@ export default function Header(props) {
     const [nomeSobrenome, setNomeSobrenome] = React.useState(true);
 
     const resizer = () => {
-        setNomeSobrenome(window.innerWidth <= 760 ? false : true)
+        setNomeSobrenome(window.innerWidth <= 780 ? false : true)
     }
 
     React.useEffect(() => {

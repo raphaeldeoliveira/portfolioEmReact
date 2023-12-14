@@ -353,7 +353,7 @@ export const StyledResume = styled.div`
     //height: auto;
     height: 88vw;
 
-    margin-top: 15px;
+    margin-top: 5vw;
     margin-bottom: 0px;
 
     h1 {
@@ -1180,7 +1180,7 @@ export const StyledFooter = styled.footer`
     display: flex;
 
     .social-midia-button-green {
-      background-color: #000800;
+      background-color: #008000;
       border-radius: 10px;
     }
   }
