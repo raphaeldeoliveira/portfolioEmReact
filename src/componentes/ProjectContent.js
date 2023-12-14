@@ -21,7 +21,7 @@ export default function ProjectContent(props) {
         }
         else if (currentId === 1) {
             //props.setTranslateY(-38.25)
-            props.setTranslateY(props.mobile ? -192 : -38.27)
+            props.setTranslateY(props.mobile ? -193.5 : -38.27)
             setTimeout(() => {
                 props.setTitle(props.titleProject2)
                 props.setProjectLink("https://github.com/raphaeldeoliveira/PlataformaEnsino")
@@ -29,7 +29,7 @@ export default function ProjectContent(props) {
         }
         else {
             //props.setTranslateY(-76.5)
-            props.setTranslateY(props.mobile ? -384 : -76.54)
+            props.setTranslateY(props.mobile ? -387 : -76.54)
             setTimeout(() => {
                 props.setTitle(props.titleProject3)
                 props.setProjectLink("https://github.com/raphaeldeoliveira/LojaRoupaApp")

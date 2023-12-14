@@ -231,7 +231,7 @@ export const StyledPhotoProfile = styled.div`
     }
 
     &.active-rotate {
-      transform: rotateY(180deg) translateX(-20px);
+      transform: rotateY(180deg) translateX(0px);
     }
 
   }
@@ -350,7 +350,8 @@ export const StyledResume = styled.div`
 
   @media (max-width: 780px) {
     
-    height: auto;
+    //height: auto;
+    height: 88vw;
 
     margin-top: 15px;
     margin-bottom: 0px;
@@ -456,7 +457,8 @@ export const StyledCurriculum = styled.div`
 
   @media (max-width: 780px) {
     margin-top: 5vw;
-    height: 74vw;
+    //height: 74vw;
+    height: 88vw;
     //line-height: 1.3;
     font-size: 3.5vw;
 
@@ -908,7 +910,7 @@ export const StyledPanel = styled.div`
     .carrousel-de-paineis {
       //height: 94vw;
       //height: 106vw;
-      height: 192vw;
+      height: 194vw;
     }
   }
 

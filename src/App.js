@@ -96,14 +96,14 @@ function App() {
         }, 500)
       } else if (currentId == 1) {
         //setTranslateY(-38.27)
-        setTranslateY(mobile ? -192 : -38.27)
+        setTranslateY(mobile ? -193.5 : -38.27)
         setTimeout(() => {
           setTitle((activeBr ? idiomaBr.titleProject2 : idiomaEn.titleProject2))
           setProjectLink("https://github.com/raphaeldeoliveira/PlataformaEnsino")
         }, 500)
       } else {
         //setTranslateY(-76.54)
-        setTranslateY(mobile ? -384 : -76.54)
+        setTranslateY(mobile ? -387 : -76.54)
         setTimeout(() => {
           setTitle((activeBr ? idiomaBr.titleProject3 : idiomaEn.titleProject3))
           setProjectLink("https://github.com/raphaeldeoliveira/LojaRoupaApp")
