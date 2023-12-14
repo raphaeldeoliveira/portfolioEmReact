@@ -267,11 +267,11 @@ export const StyledPhotoProfile = styled.div`
     width: 100%;
 
     div {
-    width: 100vw;
-    height: 85vw;
-    position: relative;
-    margin: auto;
-  }
+      width: 100vw;
+      height: 85vw;
+      position: relative;
+      margin: auto;
+    }
 
     img {
       width: 70% !important;
@@ -281,6 +281,10 @@ export const StyledPhotoProfile = styled.div`
       margin: 0px;
       margin-top: 1.5vw;
       font-size: 11vw;
+    }
+
+    div > .imagem-rotatoria.active-rotate {
+      transform: rotateY(180deg) translateX(0px);
     }
 
   }
@@ -455,6 +459,25 @@ export const StyledCurriculum = styled.div`
     height: 74vw;
     //line-height: 1.3;
     font-size: 3.5vw;
+
+    width: 80%;
+    padding: 0px;
+
+    h4:first-of-type {
+      padding-top: 20px;
+    }
+
+    p:last-of-type {
+      padding-bottom: 20px;
+    }
+
+    h2, h4, p, .two-text {
+      padding: 0px 20px;
+    }
+
+    hr {
+      margin: 4px 20px;
+    }
 
   }
 
